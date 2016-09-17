@@ -1,0 +1,339 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body, html {
+	background-color: #EAEAEA;
+	height:100%;
+}
+body {
+  padding-top: 75px;
+  font-size: 12px;
+}
+
+/*
+ * Navigation bar
+ */
+.navbar-inverse {
+	padding: 10px 0;
+	background-color: #008cd2;
+	border-width: 0 ;
+}
+.navbar-inverse .navbar-form {
+	margin: 12px 0;
+}
+.navbar-inverse .navbar-form .form-control {
+	border-radius: 15px;
+	line-height: 16px;
+	height: 26px;
+	padding: 5px 10px;
+	vertical-align: middle;
+	font-size: 12px;
+}
+.navbar-inverse .navbar-nav > li:first-child{
+	border-right: 1px solid #A0D6DD;
+}
+.navbar-inverse .navbar-nav > li > a{
+	color: #EEE;
+	font-size: 12px;
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	padding: 15px 20px;
+	font-weight: 300;
+}
+.navbar-inverse .navbar-nav > li > a:hover{
+	text-decoration:underline;
+}
+.navbar-inverse .navbar-nav > li > a span{
+	font-size: 15px;
+	vertical-align: sub;
+	margin-right: 7px;
+	width: 15px;
+}
+.navbar-inverse .navbar-form.navbar-right:last-child {
+	margin-right:0;
+}
+.navbar-inverse .navbar-brand{
+	font-size: 32px;
+	color: #EEE;
+}
+@media screen and (max-width: 768px) {
+	.navbar-inverse .navbar-nav > li > a {
+		font-size:14px;
+	}
+	.navbar-inverse .navbar-form.navbar-right:last-child {
+		margin: 0 -15px;
+	}
+	.navbar-inverse .navbar-collapse{
+		margin-top: 15px;
+		border-color: #A0D6DD;
+	}
+	.navbar-inverse .navbar-collapse .navbar-form{
+		border-color: #A0D6DD;
+		border-bottom:0 none;
+		padding-bottom: 0;
+	}
+	.navbar-inverse .navbar-toggle{
+		border-color: #A0D6DD;
+	}
+	.navbar-inverse .navbar-toggle:hover,
+	.navbar-inverse .navbar-toggle:focus{
+		background-color: rgba(0,0,0,0.1)
+	}
+}
+@media screen and (max-width: 420px) {
+	.col-sm-12{
+		padding: 15px 0 0;
+	}
+	.navbar-inverse .navbar-brand {
+		font-size: 28px;
+	}
+	.panel.panel-primary {
+		border-radius: 0;
+		border-width: 1px 0 1px 0;
+	}
+	html .panel .table tbody td,
+	html .panel .table-responsive tbody td,
+	html .panel .table thead th,
+	html .panel .table-responsive thead th	{
+		padding: 10px 5px;
+	}
+	html .panel .table tbody td:first-child,
+	html .panel .table-responsive tbody td:first-child,
+	html .panel .table thead th:first-child,
+	html .panel .table-responsive thead th:first-child	{
+		padding-left: 15px;
+	}
+	html .panel .table tbody td:last-child,
+	html .panel .table-responsive tbody td:last-child,
+	html .panel .table thead th:last-child,
+	html .panel .table-responsive thead th:last-child	{
+		padding-right: 15px;
+	}
+	html .timesheet-detail tbody .input-sm, .timesheet-detail tbody span {
+		width: 20px;
+	}
+	.checkboxRow{
+		display: none !important;
+	}
+}
+/*
+ * Main content
+ */
+ h1, h2, h3, h4, h5, h6, .navbar-header .navbar-brand, .panel .panel-heading {
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+ }
+.main{
+	padding-top:15px;
+}
+.btn-toolbar {
+	margin: 0 0 10px -5px;
+}
+a {
+	color: #ff7f00;
+}
+a:hover {
+	color: #ff7f00;
+	text-decoration: underline;
+}
+.panel-primary {
+	border-color: #cccccc;
+	border-radius: 0;
+	box-shadow: 3px 4px 22px 0px rgba(50, 50, 50, 0.37);
+	-webkit-box-shadow: 3px 4px 22px 0px rgba(50, 50, 50, 0.37);
+	-moz-box-shadow: 3px 4px 22px 0px rgba(50, 50, 50, 0.37);
+	border-width: 0;
+}
+.panel-primary > .panel-heading{
+	background-color: transparent;
+	border-color: transparent;
+	color: #0099CC;
+	font-size: 22px;
+	font-weight: 300;
+	letter-spacing: -1px;
+	line-height: 1.2;
+	padding: 15px;
+}
+.panel .table,
+.panel .table th,
+.panel .table td,
+.panel .table-responsive th,
+.panel .table-responsive td{
+	border-color: #AFB2BB;
+}
+.panel .table{
+	border-top: 1px solid #AFB2BB !important;
+	
+}
+.panel .table thead,
+.panel .table-responsive thead {
+	color: #577194;
+	background-color: #EFF2F8;
+	border-color: #DBE0EB;
+	font-weight: bold;
+}
+.panel .table thead th,
+.panel .table-responsive thead  th{
+	border-bottom-width: 1px;
+	padding:10px 15px;
+}
+.panel .table tbody td,
+.panel .table-responsive tbody td{
+	padding:10px 15px;
+}
+.btn{
+	border-radius: 3px;
+	padding: 5px 10px;
+	line-height: 16px;
+	font-size: 12px;
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(250,250,250,0.4);
+	-moz-box-shadow: inset 0px 1px 0px 0px rgba(250,250,250,0.4);
+	box-shadow: inset 0px 1px 0px 0px rgba(250,250,250,0.4);
+}
+.btn-primary{
+	background-color:#3AA9E6;
+	border-color:#1E87C1;
+}
+.btn-info{
+	background-color: #8B9FB2;
+	border-color: #577194;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary{
+	background-color:#1E87C1;
+	border-color:#1E87C1;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info{
+	background-color: #577194;
+	border-color: #577194;
+}
+.progress {
+	height: 3px;
+	border-radius: 0;
+	margin: 0 0 15px;
+}
+.form-control {
+display: block;
+height: 28px;
+padding: 6px 10px;
+font-size: 12px;
+line-height: 14px;
+}
+.panel-body {
+	padding: 0 15px 5px;
+}
+.panel-footer {
+	overflow: hidden;
+	border-color: #AFB2BB;
+	-webkit-box-shadow: inset 0px 3px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: inset 0px 3px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: inset 0px 3px 3px 0px rgba(0,0,0,0.2);
+	padding-top: 13px;
+}
+/*Views*/
+.searchResults .panel-footer,
+.searchResults .panel-body{
+	display:none;
+}
+.timesheet-detail tbody .input-sm,
+.timesheet-detail tbody span {
+	border: 1px solid transparent;
+	cursor:pointer;
+	width: 33px;
+	height:20px;
+	line-height:20px;
+	font-size:12px;
+	text-align: center;
+	margin: 0px !important;
+	padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.timesheet-detail tbody .input-sm:focus{
+	border: 1px solid rgb(204, 204, 204);
+	cursor:cursor: text;
+}
+.panel .row.timesheet-item .table{
+	margin:0;
+}
+.panel .row.timesheet-header > div,
+.panel .row.timesheet-item > div{
+	padding-left: 0;
+}
+.panel .row.timesheet-header > div:first-child,
+.panel .row.timesheet-item > div:first-child{
+	padding-left: 15px;
+	padding-right: 0;
+}
+.panel .timesheet-header .timesheet-detail,
+.panel .timesheet-header .timesheet-detail thead th{
+	margin:0;
+	border-bottom:0 none;
+	line-height: 26px;
+	padding: 6px 15px;
+}
+.panel .timesheet-item .timesheet-detail thead{
+	display: none;
+}
+.panel .timesheet-total {
+	padding: 5px 15px;
+	margin:0;
+}
+.table.selectable tr.selected,
+.table.selectable tr:hover{
+	cursor: pointer;
+	background-color: #F0F0F0;
+}
+@media screen and (max-width: 991px) {
+	.panel .timesheet-header{
+		display:none;
+	}
+	.panel .timesheet-item {
+		position:relative;
+		margin: 0 0 0 -15px;
+	}
+	.panel .timesheet-item .timesheet-info .timesheet-detail,
+	.panel .timesheet-item .timesheet-info .timesheet-detail tbody,
+	.panel .timesheet-item .timesheet-info .timesheet-detail tbody tr,
+	.panel .timesheet-item .timesheet-info .timesheet-detail tbody tr td{
+		display: block;
+		border: none;
+	}
+	.panel .timesheet-item .timesheet-info .timesheet-detail tbody tr td{
+		float: left;
+	}
+	.panel .timesheet-item .timesheet-days {
+		position: absolute;
+		top: 42px;
+		left: 50px;
+		width: auto;
+		right: 15px;
+	}
+	.panel .timesheet-item .timesheet-days .timesheet-detail {
+		border: 1px solid #AFB2BB;
+	}
+	.panel .timesheet-item .timesheet-days .timesheet-detail td,
+	.panel .timesheet-item .timesheet-days .timesheet-detail th{
+		padding: 5px 5px;
+	}
+	.panel .timesheet-item .timesheet-info .timesheet-detail tr td {
+		width:auto;
+	}
+	.panel .timesheet-item .timesheet-info .timesheet-detail tr td:first-child {
+		width: 35px;
+		padding: 0;
+		text-align: center;
+		line-height: 122px;
+	}
+	.panel .timesheet-item .timesheet-days .timesheet-detail thead{
+		display: table-header-group;
+	}
+}

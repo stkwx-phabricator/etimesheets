@@ -1,0 +1,138 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+        Timesheet <%= data.description %> <br /><small><%= data.state.meaning %></small>
+	</div>
+	<div class="progress">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+		<span class="sr-only">20% Complete</span>
+	  </div>
+	</div>
+	<div class="panel-body">
+        <% if(data.state.code == 1 || data.state.code == 3) { %>
+		<div class="btn-toolbar">
+			<div class="btn-group btn-group">
+				<button type="button" class="btn btn-success dropdown-toggle"
+					data-toggle="dropdown">
+					Add Request&nbsp;<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" id="timesheet-detail-actionMenu">
+					
+					<li><a href="#timesheet/<%= data.timeSheetId %>/ticket/search">Search Request</a></li>
+					<li class="divider"></li>
+					<li class="dropdown-header">Requests:</li>					
+				</ul>
+			</div>
+			<div class="btn-group btn-group">
+				<button type="button" class="btn btn-danger" id="timesheet-detail-remove">Remove</button>
+			</div>
+			<div class="timesheet-total pull-right alert">
+				Total:&nbsp;<strong id="grandTotal"></strong><strong>&nbsp;hours</strong>
+			</div>
+		</div>
+        <% } %>
+	</div>
+	<div class="row timesheet-header">
+		<div class="col-xs-12 col-md-6">
+			<table class="table timesheet-detail">
+				<thead>
+					<tr>
+						<th width="5%"><input type="checkbox" value="" /></th>
+						<th width="45%">Description</th>
+						<th width="15%">Project</th>
+						<th width="15%">Type</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<table class="table timesheet-detail">
+				<thead>
+					<tr>
+						<th width="10%">Mo</th>
+						<th width="10%">Tu</th>
+						<th width="10%">We</th>
+						<th width="10%">Th</th>
+						<th width="10%">Fr</th>
+						<th width="10%">Sa</th>
+						<th width="10%">Su</th>
+						<th width="13%">Total</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>	
+	<% _.each(data.timeSheetLines,function(ticket){ %>
+	<div class="row timesheet-item">		
+		<div class="col-xs-12 col-md-6 timesheet-info">
+			<table class="table timesheet-detail">
+				<tbody>
+					<tr>
+						<td width="5%"><input type="checkbox" value="<%- ticket.timeSheetLineId %>" class="timesheet-detail-mark-checkbox"/></td>
+						<td width="45%"><%-ticket.description %></td>					
+						<td width="25%"><%- ticket.project %></td>
+						<td width="25%"><%- ticket.workItemType %></td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>
+		<div class="col-xs-12 col-md-6 timesheet-days">
+			<table class="table timesheet-detail">
+				<thead>
+					<tr>
+						<th width="10%">Mo</th>
+						<th width="10%">Tu</th>
+						<th width="10%">We</th>
+						<th width="10%">Th</th>
+						<th width="10%">Fr</th>
+						<th width="10%">Sa</th>
+						<th width="10%">Su</th>
+						<th width="30%">Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					<% var actualList = typeof ticket.timeActualsList[0][0].effortsList === 'object' ? ticket.timeActualsList[0][0].effortsList :  typeof ticket.timeActualsList[0].effortsList == 'object' ? typeof ticket.timeActualsList[0].effortsList : []%>	 				
+					<% _.each(actualList,function(effort){ %>
+					<td width="10%"><input type="text" value="<%- effort %>" min="0" max="24" step="1" data-id="<%- ticket.workItemId %>" class="form-control input-sm"/>
+					</td>
+                    <%}); %>
+					<td width="13%"><span id="res_<%- ticket.workItemId %>" class="total"><%-  _.reduce(ticket.timeActualsList[0][0].effortsList, function(memo, num){ return memo + num; }, 0) %></span></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-xs-12 col-md-12 timesheet-detail">
+			<ul>
+				<li>
+					<label>
+						SAP Activity: 
+					</label>
+					<select name="sapactivity[]" data-id="<%- ticket.workItemId %>" class="select-sapactivity">
+								<% if(data.sapActivities){ %><option></option><% } %>
+								<% _.each(data.sapActivities,function(sapActivity){%> 
+									<option value="<%- sapActivity.SAPActivityID %>" 
+										<% if( typeof ticket.userDataBean !== 'undefined' && typeof ticket.userDataBean.userData2 !== 'undefined' &&  ticket.userDataBean.userData2 == sapActivity.SAPActivityID){print('selected="selected"');}%>
+									><%- sapActivity.SAPActivityName%></option>
+								<% });%>
+					</select>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+	<% });%>
+        <% if(data.state.code == 1 || data.state.code == 3) { %>
+	<div class="panel-footer">
+			<div class="pull-right">
+				<div class="btn-group">
+					<button type="button" class="btn btn-info" id="timesheet-detail-save">Save</button>
+					<button type="button" class="btn btn-primary" id="timesheet-detail-submit">Submit</button>
+				</div>
+			</div>
+	</div>
+        <% } else { %>
+    <div class="alert alert-warning" role="alert">This TimeSheet cannot be modify, current status: <%= data.state.meaning %></div>
+        <% } %>    
+        <div class="alert alert-warning hide" id="alert-unable" role="alert">Unable to update timesheet</div>
+
+</div>

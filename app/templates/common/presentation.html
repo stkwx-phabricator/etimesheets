@@ -1,0 +1,19 @@
+<div class="businessCases-slider animated bounceInLeft">
+    <div class="row">
+        <div class="col-sm-2">
+            <span id="back" class="glyphicon glyphicon-hand-left"></span>
+        </div>
+        <div class="col-sm-8">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <%_.each(presentation.imgs, function(src,index){ %>
+                    <div class="swiper-slide"> <img src="<%=src %>" > </div>
+                    <%})%>
+                </div>
+                <div class="row text-center">
+                    <div class="pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

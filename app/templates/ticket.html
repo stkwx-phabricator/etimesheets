@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		My Work Items
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th width="10%">Id</th>
+				<th width="50%">Name</th>				
+				<th width="15%">Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(tickets,function(ticket){%>
+				
+			<tr>
+				<td width="10%"><%=ticket.id %></td>
+				<td width="50%"><%= ticket.name %></td>
+				<td width="15%"><%= ticket.type %></td>					
+			</tr>
+			<% }); %>
+		</tbody>
+	</table>
+</div>

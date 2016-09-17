@@ -1,0 +1,98 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		Create Ticket
+	</div>
+	<form role="form" name="ticket-create-form" id="ticket-create-form">
+	<% var defaultValue = "", isSelected;%>
+	<div class="panel-body" >
+		<div class="row">
+			<div class="col-xs-12 col-md-6">				
+					<div class="form-group">
+						<label>Description</label>
+						<input type="text" name="description" id="ticket-create-description" class="form-control" value="<%= ticket.get("description") || defaultValue %>" />
+					</div>
+					<div class="form-group">
+						<label>Detailed Description</label>
+						<textarea name="detailed_description" id="ticket-create-detailedDescription" class="form-control"><%= ticket.get("detailed_description") || defaultValue %></textarea>
+					</div>
+					<div class="row">							
+						<div class="form-group col-md-4">
+							<label>Estimated Start Date</label>
+							<input type="text" id="ticket-create-startDate"  name="planned_startdate" class="form-control" data-provide="datepicker" value="<%= ticket.get("planned_startdate") || defaultValue %>"/>
+						</div>
+						<div class="form-group col-md-4">
+							<label>Estimated End Date</label>
+							<input type="text" id="ticket-create-endDate"  name="planned_enddate" class="form-control" data-provide="datepicker" value="<%= ticket.get("planned_enddate") || defaultValue %>" />
+						</div>
+						<div class="form-group col-md-4">
+							<label>Estimated Duration</label>
+							<input type="text" id="ticket-create-duration"  name="planned_duration" class="form-control" value="<%= ticket.get("planned_duration") || defaultValue %>" />
+						</div>
+					</div>
+					<div class="row">							
+						<div class="form-group col-md-4">
+							<label>Real Start Date</label>
+							<input type="text" id="ticket-create-rStartDate"  name="real_startdate" class="form-control" data-provide="datepicker" value="<%= ticket.get("real_startdate") || defaultValue %>"/>
+						</div>
+						<div class="form-group col-md-4">
+							<label>Real End Date</label>
+							<input type="text" id="ticket-create-rEndDate"  name="real_enddate" class="form-control" data-provide="datepicker" value="<%= ticket.get("real_enddate") || defaultValue %>" />
+						</div>
+						<div class="form-group col-md-4">
+							<label>Real Duration</label>
+							<input type="text" id="ticket-create-duration"  name="real_duration" class="form-control" value="<%= ticket.get("real_duration") || defaultValue %>" />
+						</div>
+					</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="form-group">
+					<label>Project</label>
+					<select class="form-control" name="project_id" id="ticket-create-project">
+						<% _.each(metadata.projects,function(project){
+							isSelected = (project.id == ticket.get("project_id")) ? "selected='selected'" : "" ;
+						%>
+							<option value="<%- project.id%>" <%= isSelected %>><%- project.project%></option>
+						<%}) %>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Team</label>
+					<select class="form-control" name="team_id" id="ticket-create-team">
+						<% _.each(metadata.teams,function(team){
+							isSelected = (team.id == ticket.get("team_id")) ? "selected='selected'" : "" ;
+						%>
+							<option value="<%- team.id%>"<%= isSelected %>><%- team.team%></option>
+						<%}) %>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Type</label>
+					<select class="form-control" name="type_id" id="ticket-create-type">
+						<% _.each(metadata.types,function(type){
+							isSelected = (type.id == ticket.get("type_id")) ? "selected='selected'" : "" ;
+						%>
+							<option value="<%- type.id%>" <%= isSelected %>><%- type.type%></option>
+						<%}) %>
+					</select>
+				</div>
+				<div class="checkbox">					
+					<label>
+					<input type="checkbox" id="ticket-create-include"/>
+					Include this ticket in timesheet</label>
+				</div>
+				<div class="checkbox">					
+					<label>
+					<input type="checkbox" id="ticket-create-complete"/>
+					Mark as complete</label>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="panel-footer">
+		<div class="btn-group pull-right">
+			<button type="button" class="btn btn-danger" id="ticket-create-cancel">Cancel</button>
+			<button type="submit" class="btn btn-primary">Create</button>
+		</div>	
+	</div>
+		</form>
+</div>

@@ -1,0 +1,56 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		Search Ticket
+	</div>
+	<form role="form" name="ticket-search-form" id="ticket-search-form">
+	<div class="panel-body" >
+		<div class="row">
+			<div class="col-xs-12 col-md-6">				
+				<div class="form-group">
+					<label>Description</label>
+					<input type="text" name="description" id="ticket-search-description" class="form-control" value="" />
+				</div>
+			</div>						
+		</div>
+	</div>
+		</form>
+</div>
+<div id="resultsContainer">
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		Tickets List
+	</div>
+	<div class="panel-body">
+		<p>
+			Select the tickets the tickets that should be added to Timesheet
+		</p>
+	</div>
+	<table class="table selectable" id="tbl-tickets">
+		<thead>
+			<tr>
+				<th width="10%" class="checkboxRow"><input type="checkbox" id="selectAll" /></th>
+				<th width="15%">Id</th>	
+				<th width="30%">Description</th>				
+				<th width="15%">Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(tickets,function(ticket){%>			
+			<tr>
+				<td width="10%" class="checkboxRow">
+					<input type="checkbox" class="selectTicket" id="t_<%- ticket.id %>" data-setid="<%- ticket.setId%>"/>
+				</td>
+				<td width="15%"><%= ticket.id %></td>	
+				<td width="30%"><%= ticket.name %></td>	
+				<td width="15%"><%= ticket.type %></td>	
+			</tr>
+			<% }); %>
+		</tbody>
+	</table>
+	<div class="panel-footer">
+		<div class="pull-right btn-group">
+		  <button type="button" class="btn btn-primary" id="ticket-search-select" href="#ticket/create">Add to Timesheet</button>  
+		</div>
+	</div>
+</div>
+</div>

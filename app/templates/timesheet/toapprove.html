@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		Timesheets To Approve
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th width="10%">Id</th>
+				<th width="50%">Resource</th>				
+				<th width="15%">Status</th>		
+				<th width="15%">Period</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(timesheets,function(timesheet){%>
+				
+			<tr>
+                <td width="10%"><a href="#/timesheet/<%= timesheet.TimesheetID %>/toapprove"><%= timesheet.TimesheetID %></a></td>
+                <td width="50%"><a href="#/timesheet/<%= timesheet.TimesheetID %>/toapprove"><%= timesheet.UserName %></a></td>
+				<td width="15%"><%= timesheet.StatusCode %></td>
+				<td width="15%"><%= timesheet.PeriodName %></td>					
+			</tr>
+			<% }); %>
+		</tbody>
+	</table>
+</div>

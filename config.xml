@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.softtek.easytimesheets" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Easy TimeSheets</name>
+    <description>
+        Easy Timesheets, is an app that enable you to capture your PPM timesheets from your android device.
+    </description>
+    <author email="leury.sanchez@softtek.com" href="http://stkamsets.cloudapp.net">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <preference name="android-targetSdkVersion" value="19" /> 
+    <preference name="android-minSdkVersion" value="9" />
+    <access origin="*" />
+    <platform name="android">
+    		  <icon src="app/res/android/29x29-1x.png" />
+              <icon src="app/res/android/40x40-1x.png" density="ldpi" />
+              <icon src="app/res/android/76x76.png" density="mdpi" />
+              <icon src="app/res/android/120x120.png" density="hdpi" />
+              <icon src="app/res/android/180x180.png" density="xhdpi" />
+     </platform>
+     <preference name="SplashScreen" value="foo" />
+	 <preference name="SplashScreenDelay" value="10000" />
+</widget>

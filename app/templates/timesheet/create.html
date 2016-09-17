@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		Create Timesheet
+	</div>
+	<form role="form" name="timesheet-create-form" id="timesheet-create-form">
+	<div class="alert alert-danger" role="alert" style="display: none"></div>
+		<div class="panel-body" >
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label for="select-period">Time Period</label> <select
+						class="form-control" name="timesheet-create-time" id="timesheet-create-time">
+						<% _.each(metadata.times,function(time){%> 
+							<option value="<%- time.id%>" <% if(time.current == true ){ %>selected="selected"<% } %>><%- time.name %></option>
+						<%})%>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="panel-footer" >
+			<div class="pull-right btn-group">
+				<button type="button" class="btn btn-danger" id="timsheet-create-cancel">Cancel</button>
+				<button type="submit" class="btn btn-primary">Create</button>
+			</div>
+		</div>
+	</form>
+</div>

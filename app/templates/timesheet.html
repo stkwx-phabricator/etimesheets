@@ -1,0 +1,32 @@
+<% var section = section || ""; %>
+
+<div class="jumbotron">
+  <h1>Welcome, <%- user.username %> !</h1>
+  <p>Now You Can Create TimeSheets  on the Go.</p>
+  <p><a class="btn-lg btn-primary" href="#" role="button" id="btn-create-timesheet">Create TimeSheet</a></p>
+</div>
+<div class="panel panel-primary<%= " " + section %>">
+	<div class="panel-heading">
+		My Timesheets
+	</div>
+	<div class="panel-body">
+		Before you create timesheets, ensure that requests have been properly captured on PPM. This app does not allow to create requests.
+	</div>
+	<table class="table" id="tbl-timesheetHistory">
+		<thead>
+			<tr>
+				<th>Period</th>
+				<th>Description</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+         <div class="alert alert-warning hide" id="alert-not-retrieving" role="alert">WARNING: Some timesheets were not able to be retrieve</div>
+     <div class="panel-footer">
+         <div><a href="#" class="text-primary" id="lnk-show-more">Show More</a><span id="loading-tm"><img src="img/ajax-loader.gif" /> Loading timesheets . . .</span></div>
+    </div>
+</div>
+<div id="to-approve" class="<%= " " + section %>"></div>
+<div id="open-tickets" class="<%= " " + section %>"></div>

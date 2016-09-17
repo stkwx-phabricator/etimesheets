@@ -1,0 +1,6 @@
+#
+# URL base for rewrites
+#
+RewriteEngine On
+RewriteCond %{REQUEST_URI}  ^/api
+RewriteRule ^(.*)$ index.html
