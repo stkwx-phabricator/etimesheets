@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="SI_AMSToolsTimesheets_Sender" targetNamespace="http://softtek.com/ams/ams_tools" xmlns:p2="http://mercury.com/ppm/tm/msg/1.0" xmlns:p1="http://softtek.com/ams/ams_tools" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:documentation/>
+    <wsp:UsingPolicy wsdl:required="false"/>
+    <wsp:Policy wsu:Id="OP_CreateTimeSheet_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_RejectTimeSheet_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_IsTimesheetApprover_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_FreezeTimeSheet_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_GetActualTime_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_GetProjectsByApprover_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_GetResourceID_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_SearchTimeSheetsByApprover_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_ReworkTimeSheetLine_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_GetUserSAPActivities_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_GetAvailablePeriods_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_RejectTimeSheetLine_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_StkAuthenticateUser"/>
+    <wsp:Policy wsu:Id="OP_ApproveTimeSheet_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_GetUsersWithUnsubmittedTimesheets_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_SearchTimeSheets_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_SubmitTimeSheet_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_GetTimeSheet_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_CloseTimeSheet_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_ApproveTimeSheetLine_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_GetUserItems_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_GetSubmittedTimesheetsForApproval_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_CancelTimeSheet_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_GetTimeSheetPolicy_SenderSync"/>
+    <wsp:Policy wsu:Id="OP_UpdateTimeSheet_SenderSync"/>
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://mercury.com/ppm/tm/service/1.0" xmlns="http://mercury.com/ppm/tm/service/1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://mercury.com/ppm/tm/1.0">
+            <xsd:import namespace="http://mercury.com/ppm/tm/1.0"/>
+            <xsd:element name="updateTimeSheet">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="searchTimeSheetsResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetId" type="xsd:long" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="cancelTimeSheetResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getActualTimeResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:WorkItemActualTime" minOccurs="0" maxOccurs="unbounded" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="reworkTimeSheetLineResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="rejectTimeSheet">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="approveTimeSheetLine">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetLineId" type="xsd:long" form="qualified"/>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="cancelTimeSheet">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getTimeSheetPolicyResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetPolicyBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="reworkTimeSheetLine">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetLineId" type="xsd:long" form="qualified"/>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="freezeTimeSheet">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="updateTimeSheetResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="submitTimeSheet">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="createTimeSheetResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getActualTime">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="param0" type="tm:TimeFilter" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getTimeSheet">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetId" type="xsd:long" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="rejectTimeSheetLineResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="rejectTimeSheetLine">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetLineId" type="xsd:long" form="qualified"/>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="approveTimeSheet">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="createTimeSheet">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="approveTimeSheetLineResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getTimeSheetPolicy">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="policyName" type="xsd:string" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="rejectTimeSheetResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getTimeSheetResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="approveTimeSheetResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="closeTimeSheetResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="freezeTimeSheetResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="searchTimeSheets">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="searchCriteriaBean" type="tm:TimeSheetSearchCriteriaBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="closeTimeSheet">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="timeSheetBean" type="tm:TimeSheetBean" form="qualified"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="submitTimeSheetResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="return" type="tm:TimeSheetBean" form="qualified" nillable="true"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+        <xsd:schema targetNamespace="http://mercury.com/ppm/tm/1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://mercury.com/ppm/tm/1.0">
+            <xsd:complexType name="TimeSheetSearchCriteriaBean">
+                <xsd:sequence>
+                    <xsd:element name="periodId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="periodTypeId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="previousTimePeriodsCount" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="descriptionKeywords" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="resourceIdList" type="xsd:long" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    <xsd:element name="statusList" type="xsd:long" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    <xsd:element name="managerIdList" type="xsd:long" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    <xsd:element name="orgUnitIdList" type="xsd:long" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="WorkItemActualTime">
+                <xsd:sequence>
+                    <xsd:element name="startDate" type="xsd:dateTime" form="qualified"/>
+                    <xsd:element name="endDate" type="xsd:dateTime" form="qualified"/>
+                    <xsd:element name="workItemName" type="xsd:string" form="qualified"/>
+                    <xsd:element name="workItemTypeCode" type="xsd:string" form="qualified"/>
+                    <xsd:element name="workItemID" type="xsd:string" form="qualified"/>
+                    <xsd:element name="activityName" type="xsd:string" form="qualified"/>
+                    <xsd:element name="chargeCode" type="xsd:string" form="qualified"/>
+                    <xsd:element name="hours" type="xsd:string" form="qualified"/>
+                    <xsd:element name="resource" type="xsd:string" form="qualified"/>
+                    <xsd:element name="timeSheetLineStatus" type="xsd:string" form="qualified"/>
+                    <xsd:element name="cost" type="xsd:string" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="moneyInfo">
+                <xsd:sequence>
+                    <xsd:element name="localValue" type="xsd:decimal" form="qualified"/>
+                    <xsd:element name="localCurrencyCode" type="xsd:string" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="userDataInfo">
+                <xsd:sequence>
+                    <xsd:element name="userData1" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData2" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData3" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData4" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData5" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData6" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData7" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData8" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData9" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData10" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData11" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData12" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData13" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData14" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData15" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData16" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData17" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData18" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData19" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="userData20" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData1" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData2" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData3" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData4" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData5" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData6" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData7" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData8" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData9" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData10" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData11" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData12" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData13" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData14" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData15" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData16" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData17" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData18" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData19" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="visUserData20" type="xsd:string" minOccurs="0" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="TimeFilter">
+                <xsd:sequence>
+                    <xsd:element name="startDate" type="xsd:dateTime" form="qualified"/>
+                    <xsd:element name="endDate" type="xsd:dateTime" form="qualified"/>
+                    <xsd:element name="periodTypeName" type="xsd:string" form="qualified"/>
+                    <xsd:element name="workItemType" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="workItemName" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="workItemID" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="resources" type="xsd:string" minOccurs="0" maxOccurs="255" form="qualified"/>
+                    <xsd:element name="timeSheetStatuses" type="xsd:string" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    <xsd:element name="timeSheetLineStatuses" type="xsd:string" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    <xsd:element name="includeActualCost" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="TimeSheetStatus">
+                <xsd:sequence>
+                    <xsd:element name="code" type="xsd:integer" form="qualified"/>
+                    <xsd:element name="meaning" type="xsd:string" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="TimeSheetPolicyBean">
+                <xsd:sequence>
+                    <xsd:element name="timeSheetPolicyId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="timeSheetPolicyName" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="bucketShowLevel" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="bucketReportMethod" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="periodHoursCalcTypeCode" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="hoursInPeriodType" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="hoursPerPeriod" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="workdayHours" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="maximumHoursPerDay" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="maximumHoursPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="minimumHoursPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="maximumDaysPerDay" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="maximumDaysPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="minimumDaysPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="maximumPercentPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="minimumPercentPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="allowMultipleTimeSheets" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="notifyDelinquentTimeSheet" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="reqActivitiesRequiredFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="tskActivitiesRequiredFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="prjActivitiesRequiredFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="pkgActivitiesRequiredFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="miscActivitiesRequiredFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="reqWorkItemEnabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="tskWorkItemEnabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="prjWorkItemEnabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="pkgWorkItemEnabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="mscWorkItemEnabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="enforcementLevelError" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="TimeSheetBean">
+                <xsd:sequence>
+                    <xsd:element name="timeSheetId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="resourceId" type="xsd:long" form="qualified"/>
+                    <xsd:element name="description" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="sequence" type="xsd:integer" minOccurs="0" form="qualified"/>
+                    <xsd:element name="periodId" type="xsd:long" form="qualified"/>
+                    <xsd:element name="state" type="TimeSheetStatus" minOccurs="0" form="qualified"/>
+                    <xsd:element name="exceptionMessage" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="timeApproverParticipantGroupId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="timeApproverSecurityGroupId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="timeApproverUsersIds" type="xsd:long" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    <xsd:element name="billingApproverParticipantGroupId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="billingApproverSecurityGroupId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="billingApproverUsersIds" type="xsd:long" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    <xsd:element name="bucketShowLevel" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="bucketReportMethod" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="periodHoursCalcTypeCode" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="hoursInPeriodType" type="xsd:string" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="hoursPerPeriod" type="xsd:double" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="workdayHours" type="xsd:double" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="maximumHoursPerDay" type="xsd:double" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="maximumHoursPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="minimumHoursPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="maximumDaysPerDay" type="xsd:double" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="maximumDaysPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="minimumDaysPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="maximumPercentPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="minimumPercentPerTimeSheet" type="xsd:double" minOccurs="0" form="qualified" nillable="true"/>
+                    <xsd:element name="allowMultipleTimeSheets" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="notifyDelinquentTimeSheet" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="reqActivitiesRequiredFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="tskActivitiesRequiredFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="prjActivitiesRequiredFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="pkgActivitiesRequiredFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="miscActivitiesRequiredFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="reqWorkItemEnabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="tskWorkItemEnabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="prjWorkItemEnabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="pkgWorkItemEnabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="mscWorkItemEnabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="enforcementLevelError" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="timeSheetLines" type="TimeSheetLineBean" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ChargeCodeBean">
+                <xsd:sequence>
+                    <xsd:element name="chargeCodeId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="chargeCodeName" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="description" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="category" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="departmentCode" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="clientCode" type="xsd:string" minOccurs="0" form="qualified"/>
+                    <xsd:element name="percentage" type="xsd:double" minOccurs="0" form="qualified"/>
+                    <xsd:element name="enabledFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="TimeSheetLineStatus">
+                <xsd:sequence>
+                    <xsd:element name="code" type="xsd:integer" form="qualified"/>
+                    <xsd:element name="meaning" type="xsd:string" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="TimeActualsBean">
+                <xsd:sequence>
+                    <xsd:element name="activityId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="totalsFlag" type="xsd:boolean" form="qualified"/>
+                    <xsd:element name="actualCost" type="costInfo" minOccurs="0" form="qualified"/>
+                    <xsd:element name="effortsList" type="xsd:double" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="TimeSheetLineBean">
+                <xsd:sequence>
+                    <xsd:element name="timeSheetLineId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="workItemId" type="xsd:string" form="qualified"/>
+                    <xsd:element name="workItemSetId" type="xsd:string" form="qualified"/>
+                    <xsd:element name="workItemType" type="xsd:string" form="qualified"/>
+                    <xsd:element name="state" type="TimeSheetLineStatus" minOccurs="0" form="qualified"/>
+                    <xsd:element name="chargeCodesList" type="ChargeCodeBean" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    <xsd:element name="updateChargeCodeFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="requireChargeCodeFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="actualApproverUserId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="timeApproverParticipantGroupId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="timeApproverSecurityGroupId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="timeApproverUsersIds" type="xsd:long" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    <xsd:element name="billingApproverParticipantGroupId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="billingApproverSecurityGroupId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="billingApproverUsersIds" type="xsd:long" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                    <xsd:element name="userDataBean" type="userDataInfo" minOccurs="0" form="qualified"/>
+                    <xsd:element name="effortOnWorkItemEntityFlag" type="xsd:boolean" minOccurs="0" form="qualified"/>
+                    <xsd:element name="tmWorkUnitId" type="xsd:long" minOccurs="0" form="qualified"/>
+                    <xsd:element name="timeActualsList" type="TimeActualsBean" minOccurs="0" maxOccurs="unbounded" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="costInfo">
+                <xsd:sequence>
+                    <xsd:element name="actualCapLaborMoney" type="moneyInfo" minOccurs="0" form="qualified"/>
+                    <xsd:element name="actualCapNonLaborMoney" type="moneyInfo" minOccurs="0" form="qualified"/>
+                    <xsd:element name="actualOpLaborMoney" type="moneyInfo" minOccurs="0" form="qualified"/>
+                    <xsd:element name="actualOpNonLaborMoney" type="moneyInfo" minOccurs="0" form="qualified"/>
+                    <xsd:element name="plannedCapLaborMoney" type="moneyInfo" minOccurs="0" form="qualified"/>
+                    <xsd:element name="plannedCapNonLaborMoney" type="moneyInfo" minOccurs="0" form="qualified"/>
+                    <xsd:element name="plannedOpLaborMoney" type="moneyInfo" minOccurs="0" form="qualified"/>
+                    <xsd:element name="plannedOpNonLaborMoney" type="moneyInfo" minOccurs="0" form="qualified"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+        <xsd:schema targetNamespace="http://softtek.com/ams/ams_tools" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://softtek.com/ams/ams_tools">
+            <xsd:element name="MT_GetUsersWithUnsubmittedTimesheets_SenderResponse" type="DT_GetUsersWithUnsubmittedTimesheets_SenderResponse"/>
+            <xsd:element name="MT_GetUserSAPActivities_SenderResponse" type="DT_GetUserSAPActivities_SenderResponse"/>
+            <xsd:element name="MT_GetUserItems_SenderRequest" type="DT_GetUserItems_SenderRequest"/>
+            <xsd:element name="MT_StkAuthenticateUser_SenderRequest" type="DT_StkAuthenticateUser_SenderRequest"/>
+            <xsd:element name="MT_GetSubmittedTimesheetsForApproval_SenderResponse" type="DT_GetSubmittedTimesheetsForApproval_SenderResponse"/>
+            <xsd:element name="MT_SearchTimeSheetsByApprover_SenderRequest" type="DT_SearchTimeSheetsByApprover_SenderRequest"/>
+            <xsd:element name="MT_IsTimesheetApprover_SenderResponse" type="DT_IsTimesheetApprover_SenderResponse"/>
+            <xsd:element name="MT_GetResourceID_SenderResponse" type="DT_GetResourceID_SenderResponse"/>
+            <xsd:element name="MT_IsTimesheetApprover_SenderRequest" type="DT_IsTimesheetApprover_SenderRequest"/>
+            <xsd:element name="MT_StkAuthenticateUser_SenderResponse" type="DT_StkAuthenticateUser_SenderResponse"/>
+            <xsd:element name="MT_GetSubmittedTimesheetsForApproval_SenderRequest" type="DT_GetSubmittedTimesheetsForApproval_SenderRequest"/>
+            <xsd:element name="MT_GetProjectsByApprover_SenderRequest" type="DT_GetProjectsByApprover_SenderRequest"/>
+            <xsd:element name="MT_GetUserItems_SenderResponse" type="DT_GetUserItems_SenderResponse"/>
+            <xsd:element name="MT_GetUserSAPActivities_SenderRequest" type="DT_GetUserSAPActivities_SenderRequest"/>
+            <xsd:element name="MT_GetUsersWithUnsubmittedTimesheets_SenderRequest" type="DT_GetUsersWithUnsubmittedTimesheets_SenderRequest"/>
+            <xsd:element name="MT_GetProjectsByApprover_SenderResponse" type="DT_GetProjectsByApprover_SenderResponse"/>
+            <xsd:element name="MT_GetResourceID_SenderRequest" type="DT_GetResourceID_SenderRequest"/>
+            <xsd:element name="MT_SearchTimeSheetsByApprover_SenderResponse" type="DT_SearchTimeSheetsByApprover_SenderResponse"/>
+            <xsd:element name="MT_GetAvailablePeriods_SenderRequest" type="DT_GetAvailablePeriods_SenderRequest"/>
+            <xsd:element name="MT_GetAvailablePeriods_SenderResponse" type="DT_GetAvailablePeriods_SenderResponse"/>
+            <xsd:simpleType name="PPMUserID">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="EN">Kintana PPM Numeric User ID</xsd:documentation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">86950aa8618911e2a65c000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:restriction base="xsd:long"/>
+            </xsd:simpleType>
+            <xsd:complexType name="DT_StkAuthenticateUser_SenderRequest">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">5ac9f703654111e4af30000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="userName" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">05227522a37511e29df0c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="password" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">05227523a37511e28d77c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="testEnviroment" type="xsd:boolean" minOccurs="0" default="false">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">05227524a37511e2c97cc417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetProjectsByApprover_SenderResponse">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">6532abec618f11e2c31f000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="Project" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">6fc36cdd4aba11e28e1cc417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="ID" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6fc36cdb4aba11e29309c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Name" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">6fc36cdc4aba11e280f7c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetAvailablePeriods_SenderRequest">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">897565fd618a11e28471000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="MaxResults" type="xsd:int" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetResourceID_SenderRequest">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">77edfd5b618f11e286a4000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="Username" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">3d9a29f9954611e1c7a6c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetSubmittedTimesheetsForApproval_SenderResponse">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="EN">List of submitted timesheets</xsd:documentation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">b3c4f026618f11e2cf40000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="timesheet" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">b8f23ccc430011e28e93c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="UserID" type="PPMUserID">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">b8f23ccb430011e2c4d0c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="UserName" type="xsd:string"/>
+                                <xsd:element name="TimesheetID" type="xsd:long"/>
+                                <xsd:element name="PeriodID" type="xsd:long"/>
+                                <xsd:element name="PeriodName" type="xsd:string"/>
+                                <xsd:element name="Project" type="xsd:string"/>
+                                <xsd:element name="SAPActivity" type="xsd:string"/>
+                                <xsd:element name="TotalHours" type="xsd:float"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetSubmittedTimesheetsForApproval_SenderRequest">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="EN">Input the approver user ID to get the user submitted timesheets</xsd:documentation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">a455f2ba618f11e2b6e0000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="ApproverID" type="PPMUserID">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">58a26c8742e911e2b2b6c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_SearchTimeSheetsByApprover_SenderResponse">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="EN">List of submitted timesheets</xsd:documentation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">63fa458d619011e2be10000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="timesheet" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">b8f23ccc430011e28e93c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="UserID" type="PPMUserID">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">b8f23ccb430011e2c4d0c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="UserName" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">a35759c04a2d11e2b303c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TimesheetID" type="xsd:long">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">a35759c14a2d11e2cea5c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="StatusCode" type="xsd:string"/>
+                                <xsd:element name="PeriodID" type="xsd:long">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">a35759c24a2d11e2c414c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="PeriodName" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">a35759c34a2d11e2b575c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Project" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">a357a2f94a2d11e29380c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SAPActivity" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">a357a2fa4a2d11e2c7b1c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TotalHours" type="xsd:float">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">a357a2fb4a2d11e2adcec417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetUserItems_SenderResponse">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">92eed42794fa11e3b718000002328097</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="Item" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">1337f91f455d11e2c4aec417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="ID" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">03113582455d11e2aa53c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Name" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">03113583455d11e2a7ecc417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Type" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">03113584455d11e2a0d6c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SetID" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_IsTimesheetApprover_SenderResponse">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="EN">Respuesta con la bandera de aprobador</xsd:documentation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">446241d9619011e2b437000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="IsApprover" type="xsd:boolean">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">ba43ca7e409311e2923bc417fe849774</xsd:appinfo>
+                            <xsd:documentation>Bandera que indica si el usuario es aprobador o no de timesheets</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_SearchTimeSheetsByApprover_SenderRequest">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="EN">Input the approver user ID to get the user submitted timesheets</xsd:documentation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">5528bdda619011e2ac32000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="ApproverID" type="PPMUserID">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">58a26c8742e911e2b2b6c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="ProjectName" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">937ef52f4a3111e29930c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="PeriodID" type="xsd:long" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">937ef5304a3111e28c8fc417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="UserName" type="xsd:string" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">937ef5314a3111e2948fc417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetUserSAPActivities_SenderRequest">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">efd2ebc4618f11e2a8ed000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="UserID" type="PPMUserID"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetUsersWithUnsubmittedTimesheets_SenderResponse">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">23d0e4a6619011e29860000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="user" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">7d21131f4a2011e2abc7c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="ID" type="PPMUserID">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">7d21131c4a2011e2b221c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="PeriodID" type="xsd:long">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">7d21131d4a2011e292c3c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="PeriodName" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">7d21131e4a2011e28f3ec417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="Status" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetAvailablePeriods_SenderResponse">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">32c28c6a618f11e2b96f000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="Period" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="ID" type="xsd:string"/>
+                                <xsd:element name="Name" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetResourceID_SenderResponse">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="EN">.</xsd:documentation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">9330f6e9618f11e2a3b7000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="ResourceID" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">63e8d479954611e1b2e0c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetUserSAPActivities_SenderResponse">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">fee1bb76618f11e2b609000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="SAPActivity" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">057c4a583fcb11e2aea0c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="SAPActivityID" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">057c1e5c3fcb11e2c5e7c417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SAPActivityName" type="xsd:string">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">057c4a573fcb11e2928ac417fe849774</xsd:appinfo>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ProjectName" type="xsd:string"/>
+                                <xsd:element name="ActivityFrom" type="xsd:string"/>
+                                <xsd:element name="ActivityTo" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetUsersWithUnsubmittedTimesheets_SenderRequest">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">11d96fc1619011e2cf07000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="ApproverID" type="PPMUserID"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_StkAuthenticateUser_SenderResponse">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">900370ef654111e4c5a9000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="isValid" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetProjectsByApprover_SenderRequest">
+                <xsd:annotation>
+                    <xsd:documentation xml:lang="EN">Input the approver user ID to get the user submitted timesheets</xsd:documentation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">549e898a618f11e2b815000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="ApproverID" type="PPMUserID">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">58a26c8742e911e2b2b6c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_IsTimesheetApprover_SenderRequest">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">3425a59d619011e2a6da000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="UserID" type="PPMUserID" form="qualified">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">d6fc3502409211e2b905c417fe849774</xsd:appinfo>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_GetUserItems_SenderRequest">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">c85c9773618f11e2ae32000002328096</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="UserID" type="PPMUserID"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="p2.createTimeSheetMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:createTimeSheet" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.createTimeSheetResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:createTimeSheetResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.rejectTimeSheetMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:rejectTimeSheet" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.rejectTimeSheetResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:rejectTimeSheetResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="MT_IsTimesheetApprover_SenderRequest">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_IsTimesheetApprover_SenderRequest" element="p1:MT_IsTimesheetApprover_SenderRequest"/>
+    </wsdl:message>
+    <wsdl:message name="MT_IsTimesheetApprover_SenderResponse">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_IsTimesheetApprover_SenderResponse" element="p1:MT_IsTimesheetApprover_SenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="p2.freezeTimeSheetMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:freezeTimeSheet" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.freezeTimeSheetResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:freezeTimeSheetResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.getActualTimeMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:getActualTime" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.getActualTimeResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:getActualTimeResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetProjectsByApprover_SenderRequest">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetProjectsByApprover_SenderRequest" element="p1:MT_GetProjectsByApprover_SenderRequest"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetProjectsByApprover_SenderResponse">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetProjectsByApprover_SenderResponse" element="p1:MT_GetProjectsByApprover_SenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetResourceID_SenderRequest">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetResourceID_SenderRequest" element="p1:MT_GetResourceID_SenderRequest"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetResourceID_SenderResponse">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetResourceID_SenderResponse" element="p1:MT_GetResourceID_SenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="MT_SearchTimeSheetsByApprover_SenderRequest">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_SearchTimeSheetsByApprover_SenderRequest" element="p1:MT_SearchTimeSheetsByApprover_SenderRequest"/>
+    </wsdl:message>
+    <wsdl:message name="MT_SearchTimeSheetsByApprover_SenderResponse">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_SearchTimeSheetsByApprover_SenderResponse" element="p1:MT_SearchTimeSheetsByApprover_SenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="p2.reworkTimeSheetLineMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:reworkTimeSheetLine" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.reworkTimeSheetLineResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:reworkTimeSheetLineResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetUserSAPActivities_SenderRequest">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetUserSAPActivities_SenderRequest" element="p1:MT_GetUserSAPActivities_SenderRequest"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetUserSAPActivities_SenderResponse">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetUserSAPActivities_SenderResponse" element="p1:MT_GetUserSAPActivities_SenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetAvailablePeriods_SenderRequest">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetAvailablePeriods_SenderRequest" element="p1:MT_GetAvailablePeriods_SenderRequest"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetAvailablePeriods_SenderResponse">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetAvailablePeriods_SenderResponse" element="p1:MT_GetAvailablePeriods_SenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="p2.rejectTimeSheetLineMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:rejectTimeSheetLine" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.rejectTimeSheetLineResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:rejectTimeSheetLineResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="MT_StkAuthenticateUser_SenderRequest">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_StkAuthenticateUser_SenderRequest" element="p1:MT_StkAuthenticateUser_SenderRequest"/>
+    </wsdl:message>
+    <wsdl:message name="MT_StkAuthenticateUser_SenderResponse">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_StkAuthenticateUser_SenderResponse" element="p1:MT_StkAuthenticateUser_SenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="p2.approveTimeSheetMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:approveTimeSheet" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.approveTimeSheetResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:approveTimeSheetResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetUsersWithUnsubmittedTimesheets_SenderRequest">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetUsersWithUnsubmittedTimesheets_SenderRequest" element="p1:MT_GetUsersWithUnsubmittedTimesheets_SenderRequest"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetUsersWithUnsubmittedTimesheets_SenderResponse">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetUsersWithUnsubmittedTimesheets_SenderResponse" element="p1:MT_GetUsersWithUnsubmittedTimesheets_SenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="p2.searchTimeSheetsMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:searchTimeSheets" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.searchTimeSheetsResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:searchTimeSheetsResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.submitTimeSheetMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:submitTimeSheet" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.submitTimeSheetResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:submitTimeSheetResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.getTimeSheetMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:getTimeSheet" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.getTimeSheetResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:getTimeSheetResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.closeTimeSheetMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:closeTimeSheet" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.closeTimeSheetResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:closeTimeSheetResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.approveTimeSheetLineMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:approveTimeSheetLine" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.approveTimeSheetLineResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:approveTimeSheetLineResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetUserItems_SenderRequest">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetUserItems_SenderRequest" element="p1:MT_GetUserItems_SenderRequest"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetUserItems_SenderResponse">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetUserItems_SenderResponse" element="p1:MT_GetUserItems_SenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetSubmittedTimesheetsForApproval_SenderRequest">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetSubmittedTimesheetsForApproval_SenderRequest" element="p1:MT_GetSubmittedTimesheetsForApproval_SenderRequest"/>
+    </wsdl:message>
+    <wsdl:message name="MT_GetSubmittedTimesheetsForApproval_SenderResponse">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_GetSubmittedTimesheetsForApproval_SenderResponse" element="p1:MT_GetSubmittedTimesheetsForApproval_SenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="p2.cancelTimeSheetMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:cancelTimeSheet" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.cancelTimeSheetResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:cancelTimeSheetResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.getTimeSheetPolicyMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:getTimeSheetPolicy" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.getTimeSheetPolicyResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:getTimeSheetPolicyResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.updateTimeSheetMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:updateTimeSheet" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:message name="p2.updateTimeSheetResponseMessage">
+        <wsdl:documentation/>
+        <wsdl:part name="part1" element="p33:updateTimeSheetResponse" xmlns:p33="http://mercury.com/ppm/tm/service/1.0"/>
+    </wsdl:message>
+    <wsdl:portType name="SI_AMSToolsTimesheets_Sender">
+        <wsdl:documentation/>
+        <wsdl:operation name="CreateTimeSheet_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_CreateTimeSheet_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.createTimeSheetMessage"/>
+            <wsdl:output message="p1:p2.createTimeSheetResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="RejectTimeSheet_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_RejectTimeSheet_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.rejectTimeSheetMessage"/>
+            <wsdl:output message="p1:p2.rejectTimeSheetResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="IsTimesheetApprover_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_IsTimesheetApprover_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_IsTimesheetApprover_SenderRequest"/>
+            <wsdl:output message="p1:MT_IsTimesheetApprover_SenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="FreezeTimeSheet_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_FreezeTimeSheet_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.freezeTimeSheetMessage"/>
+            <wsdl:output message="p1:p2.freezeTimeSheetResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetActualTime_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_GetActualTime_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.getActualTimeMessage"/>
+            <wsdl:output message="p1:p2.getActualTimeResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetProjectsByApprover_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_GetProjectsByApprover_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_GetProjectsByApprover_SenderRequest"/>
+            <wsdl:output message="p1:MT_GetProjectsByApprover_SenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetResourceID_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_GetResourceID_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_GetResourceID_SenderRequest"/>
+            <wsdl:output message="p1:MT_GetResourceID_SenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="SearchTimeSheetsByApprover_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_SearchTimeSheetsByApprover_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_SearchTimeSheetsByApprover_SenderRequest"/>
+            <wsdl:output message="p1:MT_SearchTimeSheetsByApprover_SenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ReworkTimeSheetLine_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_ReworkTimeSheetLine_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.reworkTimeSheetLineMessage"/>
+            <wsdl:output message="p1:p2.reworkTimeSheetLineResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetUserSAPActivities_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_GetUserSAPActivities_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_GetUserSAPActivities_SenderRequest"/>
+            <wsdl:output message="p1:MT_GetUserSAPActivities_SenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetAvailablePeriods_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_GetAvailablePeriods_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_GetAvailablePeriods_SenderRequest"/>
+            <wsdl:output message="p1:MT_GetAvailablePeriods_SenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="RejectTimeSheetLine_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_RejectTimeSheetLine_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.rejectTimeSheetLineMessage"/>
+            <wsdl:output message="p1:p2.rejectTimeSheetLineResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="StkAuthenticateUser">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_StkAuthenticateUser"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_StkAuthenticateUser_SenderRequest"/>
+            <wsdl:output message="p1:MT_StkAuthenticateUser_SenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ApproveTimeSheet_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_ApproveTimeSheet_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.approveTimeSheetMessage"/>
+            <wsdl:output message="p1:p2.approveTimeSheetResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetUsersWithUnsubmittedTimesheets_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_GetUsersWithUnsubmittedTimesheets_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_GetUsersWithUnsubmittedTimesheets_SenderRequest"/>
+            <wsdl:output message="p1:MT_GetUsersWithUnsubmittedTimesheets_SenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="SearchTimeSheets_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_SearchTimeSheets_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.searchTimeSheetsMessage"/>
+            <wsdl:output message="p1:p2.searchTimeSheetsResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="SubmitTimeSheet_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_SubmitTimeSheet_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.submitTimeSheetMessage"/>
+            <wsdl:output message="p1:p2.submitTimeSheetResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetTimeSheet_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_GetTimeSheet_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.getTimeSheetMessage"/>
+            <wsdl:output message="p1:p2.getTimeSheetResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="CloseTimeSheet_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_CloseTimeSheet_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.closeTimeSheetMessage"/>
+            <wsdl:output message="p1:p2.closeTimeSheetResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="ApproveTimeSheetLine_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_ApproveTimeSheetLine_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.approveTimeSheetLineMessage"/>
+            <wsdl:output message="p1:p2.approveTimeSheetLineResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetUserItems_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_GetUserItems_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_GetUserItems_SenderRequest"/>
+            <wsdl:output message="p1:MT_GetUserItems_SenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetSubmittedTimesheetsForApproval_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_GetSubmittedTimesheetsForApproval_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_GetSubmittedTimesheetsForApproval_SenderRequest"/>
+            <wsdl:output message="p1:MT_GetSubmittedTimesheetsForApproval_SenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="CancelTimeSheet_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_CancelTimeSheet_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.cancelTimeSheetMessage"/>
+            <wsdl:output message="p1:p2.cancelTimeSheetResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetTimeSheetPolicy_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_GetTimeSheetPolicy_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.getTimeSheetPolicyMessage"/>
+            <wsdl:output message="p1:p2.getTimeSheetPolicyResponseMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateTimeSheet_SenderSync">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_UpdateTimeSheet_SenderSync"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:p2.updateTimeSheetMessage"/>
+            <wsdl:output message="p1:p2.updateTimeSheetResponseMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SI_AMSToolsTimesheets_SenderBinding" type="p1:SI_AMSToolsTimesheets_Sender">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        <wsdl:operation name="RejectTimeSheet_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CreateTimeSheet_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="IsTimesheetApprover_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FreezeTimeSheet_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetActualTime_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetProjectsByApprover_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetResourceID_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SearchTimeSheetsByApprover_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ReworkTimeSheetLine_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetUserSAPActivities_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetAvailablePeriods_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="StkAuthenticateUser">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RejectTimeSheetLine_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ApproveTimeSheet_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetUsersWithUnsubmittedTimesheets_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SearchTimeSheets_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SubmitTimeSheet_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetTimeSheet_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CloseTimeSheet_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ApproveTimeSheetLine_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetUserItems_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetSubmittedTimesheetsForApproval_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CancelTimeSheet_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetTimeSheetPolicy_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateTimeSheet_SenderSync">
+            <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="SI_AMSToolsTimesheets_SenderService">
+        <wsdl:port name="SI_AMSToolsTimesheets_SenderPort" binding="p1:SI_AMSToolsTimesheets_SenderBinding">
+            <soap:address location="https://stkmty810.softtek.com/sap/xi/engine?type=entry&amp;version=3.0&amp;Sender.Service=AMS_TOOLS_PRD&amp;Interface=http%3A%2F%2Fsofttek.com%2Fams%2Fams_tools%5ESI_AMSToolsTimesheets_Sender" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
