@@ -1,0 +1,38 @@
+﻿{
+  "projects": [
+    {
+      "id": "1635899",
+      "name": "Action Item: Timesheet Testing",
+      "type": "Project"
+    },
+    {
+      "id": "1634959",
+      "name": "Issue Resolution: Accesos a los repositorios el cliente",
+      "type": "Project"
+    },
+    {
+      "id": "1646180",
+      "name": "Issue Resolution: Computadora con virus",
+      "type": "Request"
+
+    },
+    {
+      "id": "1646710",
+      "name": "Issue Resolution: Received fishing email from n.brady@hr-communication.com",
+      "type": "Request"
+
+    }
+  ],
+  "activitys": [
+    {
+      "id": "1656680",
+      "name": "Issue Resolution: Servidor de QA bajo performance",
+      "type": "Activity"
+    },
+    {
+      "id": "1657042",
+      "name": "Issue Resolution: Monitoring Lack of Access",
+      "type": "Activity"
+    }
+  ]
+}

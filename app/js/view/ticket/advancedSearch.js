@@ -61,16 +61,16 @@ define([ 'backbone', 'text!tmpl/ticket/advancedSearch.html', 'text!tmpl/ticket/a
 				data = [],
 				self = this,
 				idTmp,
-				setidTmp,
+				//setidTmp,
 				tickets;
 			
 			ticketsHTML.each(function(){
 				idTmp = this.id.replace("t_","");
-				setidTmp = $(this).data('setid');
+				//setidTmp = $(this).data('setid');
 				data.push({
 					timesheet_id : self.timesheet,
 					ticket_id : idTmp,
-					set_id : setidTmp
+				//	set_id : setidTmp
 				});
 			});
 			tickets = new Collection.Timesheet_Ticket(data),

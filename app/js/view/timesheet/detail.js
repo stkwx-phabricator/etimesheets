@@ -7,7 +7,8 @@ define([ 'backbone', 'text!tmpl/timesheet/detail.html','Model' ], function(Backb
         total : 0,
 		events : {
 			'click #timesheet-detail-ticket-create' : 'ticket-create',
-			'click .timesheet-detail-addRecent' : 'ticket-addRecent',
+			'click #timesheet-detail-add': 'ticket-addRecent',
+            'click #timesheet-detail-projectMenu':'project-select',
 			'change .timesheet-days .timesheet-detail input' : 'ticket-edit',
 			'click #timesheet-detail-submit' : 'submit',
 			'click #timesheet-detail-save' : 'save',
@@ -19,10 +20,11 @@ define([ 'backbone', 'text!tmpl/timesheet/detail.html','Model' ], function(Backb
 		initialize : function(options) {
 			this.tickets = options.tickets;
 			this.tickets.fetch();
-			this.listenTo(this.tickets, 'sync', this.fillRecentTickets);
+			this.listenTo(this.tickets, 'sync', this.fillProjects);
+			this.listenTo(this.tickets, 'sync', this.fillActivitys);
 			this.listenTo(this.model,'change', function(){
 				this.render();
-				this.fillRecentTickets(this.tickets);
+				this.fillProjects(this.tickets.projects);
 			}.bind(this));
 		},
 		render : function() {
@@ -91,13 +93,13 @@ define([ 'backbone', 'text!tmpl/timesheet/detail.html','Model' ], function(Backb
 		'ticket-addRecent' : function(event){
 			event.preventDefault();		
 			var ticket = new Model.Timesheet_Ticket(),
-			ticketId = $(event.currentTarget).data('id'),
-			setId = $(event.currentTarget).data('setid');
+			projectid= $("#timesheet-detail-projectMenu")[0].selectedOptions[0].id,
+			    activityid = $("#timesheet-detail-activityMenu")[0].selectedOptions[0].id;		
 			
 			var data = {
 				timesheet_id : this.model.id,
-				ticket_id : ticketId,
-				set_id : setId
+				project_id: projectid,
+                activity_id:activityid
 			};
 			
 			ticket.save(data,{success:function(){
@@ -214,12 +216,23 @@ define([ 'backbone', 'text!tmpl/timesheet/detail.html','Model' ], function(Backb
             this.save(event);
 		},		
 		// Private Methods
-		'fillRecentTickets' : function(tickets) {			
-			var tmpl = '<li><a class="timesheet-detail-addRecent" data-id="<%- ticket.id %>" data-setid="<%- ticket.setId %>"><%- ticket.name %></a></li>';
-			
-			for(var i=0; i < tickets.models.length && i < 5; i++ ){				
-				this.$el.find('#timesheet-detail-actionMenu').append(_.template(tmpl,{ticket:tickets.models[i].toJSON()}));
+		'fillProjects' : function(tickets) {			
+		    var tmpl = '<option id="<%- ticket.id %>" data-id="<%- ticket.id %>"><%- ticket.name %></option>';
+		    var projectsl = tickets.models[0].attributes.projects;
+			for(var i=0; i < projectsl.length; i++ ){				
+			    this.$el.find('#timesheet-detail-projectMenu').append(_.template(tmpl, { ticket: projectsl[i] }));
 			}
+		},
+		'fillActivitys': function (tickets) {
+		    var tmpl = '<option id="<%- ticket.id %>" data-id="<%- ticket.id %>"><%- ticket.name %></option>';
+		    var activitysl=tickets.models[0].attributes.activitys;
+		    for (var i = 0; i < activitysl.length; i++) {
+		        this.$el.find('#timesheet-detail-activityMenu').append(_.template(tmpl, { ticket: activitysl[i] }));
+		    }
+		    $('.selectpicker').selectpicker({
+		        liveSearch: true,
+		        size: 8
+		    });
 		},
 		'removed' : function(response){
 			this.model.fetch();

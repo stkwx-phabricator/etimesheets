@@ -1,0 +1,8 @@
+2016-09-30T00:11:43-04:00 ERR (3): Could not connect to host
+2016-09-30T00:11:43-04:00 ERR (3): 
+2016-09-30T00:11:43-04:00 ERR (3): Auth Fail
+2016-09-30T01:19:34-04:00 ERR (3): Could not connect to host
+2016-09-30T01:19:34-04:00 ERR (3): 
+2016-09-30T01:19:34-04:00 ERR (3): Auth Fail
+2016-09-30T01:59:26-04:00 CRIT (2): Application error
+2016-09-30T01:59:26-04:00 CRIT (2): Request Parameters

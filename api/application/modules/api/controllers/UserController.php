@@ -22,10 +22,10 @@ class UserController extends Zend_Rest_Controller
 				return ;
 			}
 		}
-			
+
 		$this->view->resource = 'Access Denied';
 		$this->getResponse()->setHttpResponseCode(403);
-			
+
 	}
 
 	public function getAction(){
@@ -36,12 +36,11 @@ class UserController extends Zend_Rest_Controller
 	public function postAction(){
 
 		$form = new Api_Model_Form_Auth();
-	
 		//by default set error message
 		$this->view->resource = 'Incorrect Username or Password';
 		$this->getResponse()->setHttpResponseCode(422);
 
-		
+
 		//if form is not valid exit and stop
 		if(!$form->isValid($this->_getAllParams())){
 			return ;
@@ -51,7 +50,8 @@ class UserController extends Zend_Rest_Controller
 			$auth = PPM_Api::stkAuthenticateUser(
 			array('userName'=>$form->getValue('username'),
 				  'password'=>$form->getValue('password')));
-		}catch(Exception $e){
+		}
+		catch(Exception $e){
 			TS_Log::log('Auth Fail',TS_Log::ERR);
 			return;
 		}
@@ -62,36 +62,44 @@ class UserController extends Zend_Rest_Controller
 
 		try{
 			$resourceId = PPM_Api::getResourceId($form->getValue('username'));
-		}catch(Exception $e){
+		}
+		catch(Exception $e){
 			return;
 		}
-        
+
 		if(null == $resourceId){
 			TS_Log::log('Resource Id Not Found',TS_Log::ERR);
 			return;
 		}
-        
+
         $is_approver = 0;
-        
+
         try {
             $is_approver = PPM_Api::isTimesheetApprover($resourceId);
-        } catch (Exception $ex) {
-            
         }
-        
+		catch (Exception $ex) {
+
+        }
+
 		$this->getResponse()->setHttpResponseCode(200);
+
 		$auth = $this->_model->createRow();
+
 		$auth->username = $username;
 		$auth->token = $this->_model->generateToken($username);
 		$auth->token_issued = new Zend_Db_Expr('NOW()');
 		$auth->token_lastuse = new Zend_Db_Expr('NOW()');
 		$auth->token_expire = new Zend_Db_Expr('DATE_ADD(NOW(),INTERVAL 30 MINUTE)');
+
 		$auth->resourceId = $resourceId;
+
         $auth->is_approver = $is_approver;
 
-		$auth->save();
+        $auth->save();
 
-		$this->view->resource = $auth->toArray();
+        $this->view->resource = $auth->toArray();
+
+
 	}
 	public function putAction(){
 		$this->view->resource = 'Not Implemented';

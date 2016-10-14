@@ -1,5 +1,5 @@
 define([ 'backbone', ], function(Backbone) {
 	return Backbone.Model.extend({
-		url : 'http://stkamsets.cloudapp.net/api/timesheethasticket'
+		url : 'http://localhost:8081/api/timesheethasticket'
 	});
 });

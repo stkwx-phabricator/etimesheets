@@ -1,0 +1,11 @@
+2016-10-11T00:58:56-04:00 ERR (3): Application Error
+2016-10-11T00:58:56-04:00 ERR (3): <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP:Body>
+<SOAP:Fault><faultcode>SOAP:Server</faultcode><faultstring>Application Error</faultstring><detail><exception:exceptionDetails xmlns:exception="http://www.mercury.com/ppm/ws/exception"><exception:detail>Time period is not valid, must be within a certain range of time periods according to your system settings  
+GUID=CA3441B6-E099-72CF-4256-AEC090ED2BBB 	
+Generated Time=2016/10/10-23:58:55.092 CDT</exception:detail><exception:detail>Time period is not valid, must be within a certain range of time periods according to your system settings  
+GUID=CA3441B6-E099-72CF-4256-AEC090ED2BBB 	
+Generated Time=2016/10/10-23:58:55.092 CDT</exception:detail><exception:detail>Time period is not valid, must be within a certain range of time periods according to your system settings  </exception:detail></exception:exceptionDetails></detail></SOAP:Fault></SOAP:Body>
+</SOAP:Envelope>
+
+2016-10-11T01:49:46-04:00 ERR (3): Error Fetching http headers 791410

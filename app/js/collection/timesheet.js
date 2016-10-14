@@ -1,6 +1,6 @@
 define([ 'backbone', 'Model' ], function(Backbone, Model) {
 	return Backbone.Collection.extend({
-		url : 'http://stkamsets.cloudapp.net/api/timesheet',
+		url : 'http://localhost:8081/api/timesheet',
 		model : Model.Timesheet,
 		search: function(t){
 			var term = t || "",

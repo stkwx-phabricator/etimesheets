@@ -57,7 +57,7 @@ class ErrorController extends Zend_Controller_Action
     public function accessAction()
     {
         $this->_helper->ViewRenderer->setNoRender(true);
-        
+
         $this->getResponse()->setBody(Zend_Json::encode(array('message'=>'Access Denied.','error'=>'')));
     }
 

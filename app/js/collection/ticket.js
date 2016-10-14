@@ -1,6 +1,6 @@
 define([ 'backbone', 'Model' ], function(Backbone, Model) {
 	return Backbone.Collection.extend({
-		url : 'http://stkamsets.cloudapp.net/api/ticket',
+		url : 'http://localhost:8081/api/ticket',
 		model : Model.Ticket,
 		search: function(t){
 			var term = t || false;

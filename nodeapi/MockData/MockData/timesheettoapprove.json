@@ -1,0 +1,46 @@
+﻿[
+  {
+    "UserID": 192313,
+    "UserName": "lemon.yang",
+    "TimesheetID": 783927,
+    "StatusCode": "RELEASED",
+    "PeriodID": 100909,
+    "PeriodName": "09\/26\/16 - 10\/02\/16",
+    "Project": "",
+    "SAPActivity": "",
+    "TotalHours": 0
+  },
+  {
+    "UserID": 192313,
+    "UserName": "lemon.yang",
+    "TimesheetID": 778763,
+    "StatusCode": "RELEASED",
+    "PeriodID": 100909,
+    "PeriodName": "09\/26\/16 - 10\/02\/16",
+    "Project": "",
+    "SAPActivity": "",
+    "TotalHours": 5
+  },
+  {
+    "UserID": 192313,
+    "UserName": "lemon.yang",
+    "TimesheetID": 790401,
+    "StatusCode": "RELEASED",
+    "PeriodID": 100910,
+    "PeriodName": "10\/03\/16 - 10\/09\/16",
+    "Project": "",
+    "SAPActivity": "",
+    "TotalHours": 5
+  },
+  {
+    "UserID": 192313,
+    "UserName": "lemon.yang",
+    "TimesheetID": 783948,
+    "StatusCode": "RELEASED",
+    "PeriodID": 100909,
+    "PeriodName": "09\/26\/16 - 10\/02\/16",
+    "Project": "",
+    "SAPActivity": "",
+    "TotalHours": 0
+  }
+]

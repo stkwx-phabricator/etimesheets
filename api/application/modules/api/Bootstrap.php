@@ -5,7 +5,7 @@ class Api_Bootstrap extends Zend_Application_Module_Bootstrap
 
     public function _initREST()
     {
-        $frontController = Zend_Controller_Front::getInstance();
+         $frontController = Zend_Controller_Front::getInstance();
         // register the RestHandler plugin
         $frontController->registerPlugin(new REST_Controller_Plugin_RestHandler($frontController));
         // add REST contextSwitch helper

@@ -1,0 +1,32 @@
+﻿{
+  "periodId": 100910,
+  "timeSheetId": 790401,
+  "timeSheetLines": [
+    {
+      "timeSheetLineId": 1784705,
+      "workItemId": "1634959",
+      "workItemSetId": "30616",
+      "workItemType": "REQUEST",
+      "state": {
+        "code": 1,
+        "meaning": "unsubmitted"
+      },
+      "timeActualsList": [
+        [
+          {
+            "totalsFlag": true,
+            "actualCost": { },
+            "effortsList": [ 0, 0, 0, 0, 0, 5, 0 ]
+          },
+          {
+            "totalsFlag": false,
+            "actualCost": { },
+            "effortsList": [ 0, 0, 0, 0, 0, 5, 0 ]
+          }
+        ]
+      ],
+      "description": "Accesos  a los repositorios el cliente",
+      "project": "1-0000011774-23"
+    }
+  ]
+}

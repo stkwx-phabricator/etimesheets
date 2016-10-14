@@ -1,0 +1,52 @@
+﻿{
+  "resourceId": 192313,
+  "periodId": 100909,
+  "timeSheetId": 783927,
+  "description": "Lemon Yang - 09\/26\/16 - 10\/02\/16",
+  "sequence": 6,
+  "state": {
+    "code": 2,
+    "meaning": "pending-approval"
+  },
+  "bucketShowLevel": "DAY",
+  "bucketReportMethod": "HOURS",
+  "hoursInPeriodType": "FIXED",
+  "allowMultipleTimeSheets": true,
+  "notifyDelinquentTimeSheet": true,
+  "reqWorkItemEnabledFlag": true,
+  "tskWorkItemEnabledFlag": true,
+  "timeSheetLines": [
+    {
+      "timeSheetLineId": 1766691,
+      "workItemId": "1635899",
+      "workItemSetId": "30650",
+      "workItemType": "REQUEST",
+      "state": {
+        "code": 2,
+        "meaning": "pending-approval"
+      },
+      "timeActualsList": [
+        [
+          {
+            "totalsFlag": true,
+            "actualCost": { },
+            "effortsList": [ 0, 0, 0, 0, 0, 0, 0 ]
+          },
+          {
+            "totalsFlag": false,
+            "actualCost": { },
+            "effortsList": [ 0, 0, 0, 0, 0, 0, 0 ]
+          }
+        ]
+      ],
+      "timeApproverUsersIds": 192313,
+      "description": "Timesheet Testing",
+      "project": "GDC Operations"
+    }
+  ],
+  "sapActivities": [ ],
+  "period": {
+    "id": "100909",
+    "name": "09\/26\/16 - 10\/02\/16"
+  }
+}

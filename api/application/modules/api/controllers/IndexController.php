@@ -12,7 +12,7 @@
  * @copyright Copyright (c) 2013 General Electric Company
  */
 
-class IndexController extends Zend_Rest_Controller
+class Api_IndexController extends Zend_Rest_Controller
 {
 
     public function init()
@@ -29,7 +29,7 @@ class IndexController extends Zend_Rest_Controller
     }
     
     public function getAction(){
-        
+       /**/
     }
     public function postAction(){
         

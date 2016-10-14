@@ -7,6 +7,7 @@ require.config({
         'backbone': 'js/libs/backbone',
         'respond': 'js/libs/respond',
         'bootstrap': 'js/libs/bootstrap',
+        'bootstrapselect':'js/libs/bootstrap-select.min',
         'text': 'js/libs/text',        
         'html5shiv': 'js/libs/html5shiv',
         'css': 'js/libs/require-css/css.min',

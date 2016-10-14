@@ -5,6 +5,7 @@ define([
     'backbone',
     'Router',
     'jquery.msg',
+    'bootstrapselect',
     navigator.appVersion.indexOf("MSIE 8.") !== -1 ? 'respond' : undefined,
     navigator.appVersion.indexOf("MSIE 8.") !== -1 ? 'html5shiv' : undefined
 ], function($, require, bootstrap, Backbone, Router, Msg) {

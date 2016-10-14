@@ -1,0 +1,9 @@
+{
+  "name": "nodeapi",
+  "version": "0.0.0",
+  "description": "Nodeapi",
+  "main": "server.js",
+  "author": {
+    "name": "lemon.yang"
+  }
+}

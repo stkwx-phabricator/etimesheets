@@ -16,13 +16,13 @@ define([ 'backbone', 'text!tmpl/ticket.html', 'Collection' ], function(Backbone,
 			this.tickets = new Collection.Ticket();
 
 			this.tickets.fetch({
-				success : this.success.bind(this)
+			    success: this.success.bind(this),
 			});
 		},
 		render : function() {
 			
 			this.$el.html(this.template({
-				tickets : this.collection.toJSON()
+			    tickets: this.collection.models[0].attributes.projects
 			}));
 		},
 

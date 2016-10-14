@@ -1,0 +1,32 @@
+﻿{
+  "periodId": 100905,
+  "timeSheetId": 790439,
+  "timeSheetLines": [
+    {
+      "timeSheetLineId": 1784701,
+      "workItemId": "1635899",
+      "workItemSetId": "30650",
+      "workItemType": "REQUEST",
+      "state": {
+        "code": 1,
+        "meaning": "unsubmitted"
+      },
+      "timeActualsList": [
+        [
+          {
+            "totalsFlag": true,
+            "actualCost": { },
+            "effortsList": [ 0, 0, 0, 0, 0, 0, 0 ]
+          },
+          {
+            "totalsFlag": false,
+            "actualCost": { },
+            "effortsList": [ 0, 0, 0, 0, 0, 0, 0 ]
+          }
+        ]
+      ],
+      "description": "Timesheet Testing",
+      "project": "GDC Operations"
+    }
+  ]
+}

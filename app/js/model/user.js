@@ -1,7 +1,7 @@
 define([ 'backbone','jquery','modernizr','jquery.cookie' ], function(Backbone, $) {
 	'strict mode';
 	return Backbone.Model.extend({
-		url : 'http://stkamsets.cloudapp.net/api/user',
+		url : 'http://localhost:8081/api/user',
 		idAttribute : "id",
 		authenticated : false,
 		store : function() {

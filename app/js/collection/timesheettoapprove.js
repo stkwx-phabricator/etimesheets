@@ -1,5 +1,5 @@
 define([ 'backbone' ], function(Backbone) {
 	return Backbone.Collection.extend({
-		url : 'http://stkamsets.cloudapp.net/api/timesheettoapprove'
+		url : 'http://localhost:8081/api/timesheettoapprove'
 	});
 });

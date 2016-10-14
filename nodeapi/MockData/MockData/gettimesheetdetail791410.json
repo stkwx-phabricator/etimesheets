@@ -1,0 +1,23 @@
+﻿  {
+    "resourceId": 192313,
+    "periodId": 100911,
+    "timeSheetId": 791410,
+    "description": "Lemon Yang - 10\/10\/16 - 10\/16\/16",
+    "sequence": 1,
+    "state": {
+      "code": 1,
+      "meaning": "unsubmitted"
+    },
+    "bucketShowLevel": "DAY",
+    "bucketReportMethod": "HOURS",
+    "hoursInPeriodType": "FIXED",
+    "allowMultipleTimeSheets": true,
+    "notifyDelinquentTimeSheet": true,
+    "reqWorkItemEnabledFlag": true,
+    "tskWorkItemEnabledFlag": true,
+    "sapActivities": [ ],
+    "period": {
+      "id": "100911",
+      "name": "10\/10\/16 - 10\/16\/16"
+    }
+  }

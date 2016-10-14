@@ -1,0 +1,1232 @@
+[27-Sep-2016 08:08:34 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Log_Exception' with message '"D:\Backlog\TimeSheet\PHP\etimesheets\api\application/../data/logs/20160927_log.log" cannot be opened with mode "a"' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Log/Writer/Stream.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Log/Writer/Stream.php(2): Zend_Log_Writer_Stream->__construct('D:\\Backlog\\Time...', 'a')
+#1 [internal function]: Zend_Log_Writer_Stream::factory(Array)
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Log.php(2): call_user_func(Array, Array)
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Log.php(2): Zend_Log->_constructFromConfig('writer', Array, 'Zend_Log_Writer')
+#4 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Log.php(2): Zend_Log->_constructWriterFromConfig(Array)
+#5 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Log.php(2): Zend_Log->addWriter(Array)
+#6  in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Log/Writer/Stream.php on line 2
+[27-Sep-2016 08:14:21 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:16:06 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:19:09 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:19:41 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:21:44 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:23:56 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:29:20 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Cannot load controller class "IndexController" from file "D:\Backlog\TimeSheet\PHP\etimesheets\api\application/modules\api\controllers\IndexController.php'' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('IndexController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+ in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:33:19 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:36:45 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:37:56 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:38:40 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 08:38:41 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 20:46:36 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 20:47:14 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 20:47:27 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 20:48:23 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 20:49:34 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 20:49:43 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:08:31 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:10:30 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:12:44 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:12:51 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:24:26 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:25:01 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:26:38 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:26:49 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:26:57 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:32:36 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:33:49 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:39:12 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:39:39 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:39:49 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:40:21 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:41:21 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:43:26 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:45:14 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:47:01 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:49:05 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:49:22 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:49:42 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:51:52 America/New_York] PHP Notice:  Undefined variable: fronController in D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php on line 30
+[27-Sep-2016 21:51:52 America/New_York] PHP Stack trace:
+[27-Sep-2016 21:51:52 America/New_York] PHP   1. {main}() D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:0
+[27-Sep-2016 21:51:52 America/New_York] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:39
+[27-Sep-2016 21:51:52 America/New_York] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php:2
+[27-Sep-2016 21:51:52 America/New_York] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:51:52 America/New_York] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:51:52 America/New_York] PHP   6. Bootstrap->_initREST() phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:51:52 America/New_York] PHP Fatal error:  Call to a member function setBaseUrl() on null in D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php on line 30
+[27-Sep-2016 21:51:52 America/New_York] PHP Stack trace:
+[27-Sep-2016 21:51:52 America/New_York] PHP   1. {main}() D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:0
+[27-Sep-2016 21:51:52 America/New_York] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:39
+[27-Sep-2016 21:51:52 America/New_York] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php:2
+[27-Sep-2016 21:51:52 America/New_York] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:51:52 America/New_York] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:51:52 America/New_York] PHP   6. Bootstrap->_initREST() phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:52:18 America/New_York] PHP Notice:  Undefined variable: fronController in D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php on line 30
+[27-Sep-2016 21:52:18 America/New_York] PHP Stack trace:
+[27-Sep-2016 21:52:18 America/New_York] PHP   1. {main}() D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:0
+[27-Sep-2016 21:52:18 America/New_York] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:39
+[27-Sep-2016 21:52:18 America/New_York] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php:2
+[27-Sep-2016 21:52:18 America/New_York] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:52:18 America/New_York] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:52:18 America/New_York] PHP   6. Bootstrap->_initREST() phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:52:18 America/New_York] PHP Fatal error:  Call to a member function setBaseUrl() on null in D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php on line 30
+[27-Sep-2016 21:52:18 America/New_York] PHP Stack trace:
+[27-Sep-2016 21:52:18 America/New_York] PHP   1. {main}() D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:0
+[27-Sep-2016 21:52:18 America/New_York] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:39
+[27-Sep-2016 21:52:18 America/New_York] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php:2
+[27-Sep-2016 21:52:18 America/New_York] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:52:18 America/New_York] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:52:18 America/New_York] PHP   6. Bootstrap->_initREST() phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:53:06 America/New_York] PHP Notice:  Undefined variable: fronController in D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php on line 30
+[27-Sep-2016 21:53:06 America/New_York] PHP Stack trace:
+[27-Sep-2016 21:53:06 America/New_York] PHP   1. {main}() D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:0
+[27-Sep-2016 21:53:06 America/New_York] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:39
+[27-Sep-2016 21:53:06 America/New_York] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php:2
+[27-Sep-2016 21:53:06 America/New_York] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:53:06 America/New_York] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:53:06 America/New_York] PHP   6. Bootstrap->_initREST() phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:53:06 America/New_York] PHP Fatal error:  Call to a member function setBaseUrl() on null in D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php on line 30
+[27-Sep-2016 21:53:06 America/New_York] PHP Stack trace:
+[27-Sep-2016 21:53:06 America/New_York] PHP   1. {main}() D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:0
+[27-Sep-2016 21:53:06 America/New_York] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:39
+[27-Sep-2016 21:53:06 America/New_York] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php:2
+[27-Sep-2016 21:53:06 America/New_York] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:53:06 America/New_York] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:53:06 America/New_York] PHP   6. Bootstrap->_initREST() phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 21:53:37 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Cannot load controller class "IndexController" from file "D:\Backlog\TimeSheet\PHP\etimesheets\api\application/modules\api\controllers\IndexController.php'' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('IndexController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+ in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:54:38 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Cannot load controller class "IndexController" from file "D:\Backlog\TimeSheet\PHP\etimesheets\api\application/modules\api\controllers\IndexController.php'' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('IndexController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+ in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 21:59:18 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Cannot load controller class "IndexController" from file "D:\Backlog\TimeSheet\PHP\etimesheets\api\application/modules\api\controllers\IndexController.php'' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('IndexController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+ in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:00:04 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:02:25 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:02:31 America/New_York] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'DirectoryIterator::__construct(D:\Backlog\TimeSheet\PHP\etimesheets\api\application../modules,D:\Backlog\TimeSheet\PHP\etimesheets\api\application../modules): The system cannot find the path specified. (code: 3)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): DirectoryIterator->__construct('D:\\Backlog\\Time...')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Resource/Frontcontroller.php(2): Zend_Controller_Front->addModuleDirectory('D:\\Backlog\\Time...')
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): Zend_Application_Resource_Frontcontroller->init()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): Zend_App in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php on line 2
+[27-Sep-2016 22:02:50 America/New_York] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'DirectoryIterator::__construct(D:\Backlog\TimeSheet\PHP\etimesheets\api\application/../modules,D:\Backlog\TimeSheet\PHP\etimesheets\api\application/../modules): The system cannot find the file specified. (code: 2)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): DirectoryIterator->__construct('D:\\Backlog\\Time...')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Resource/Frontcontroller.php(2): Zend_Controller_Front->addModuleDirectory('D:\\Backlog\\Time...')
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): Zend_Application_Resource_Frontcontroller->init()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): Zend_A in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php on line 2
+[27-Sep-2016 22:03:16 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:04:11 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:04:40 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:08:22 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:08:34 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:08:47 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:08:56 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:11:03 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:11:18 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:17:33 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:18:52 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:19:22 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:20:07 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:21:17 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:21:43 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:21:53 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:24:20 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:24:54 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:28:19 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:29:17 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:37:53 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:42:17 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:47:03 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:50:07 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:53:47 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:55:40 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:55:49 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:59:13 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 22:59:57 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:00:33 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:06:40 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:07:29 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:20:27 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:20:50 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:21:19 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:21:20 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:28:19 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:30:01 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:30:14 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:30:15 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:33:50 America/New_York] PHP Fatal error:  Call to undefined method Zend_Controller_Front::setCotrollerDirectory() in D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php on line 22
+[27-Sep-2016 23:33:50 America/New_York] PHP Stack trace:
+[27-Sep-2016 23:33:50 America/New_York] PHP   1. {main}() D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:0
+[27-Sep-2016 23:33:50 America/New_York] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:39
+[27-Sep-2016 23:33:50 America/New_York] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php:2
+[27-Sep-2016 23:33:50 America/New_York] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 23:33:50 America/New_York] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 23:33:50 America/New_York] PHP   6. Bootstrap->_initREST() phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 23:34:51 America/New_York] PHP Fatal error:  Call to undefined method Zend_Controller_Front::setCotrollerDirectory() in D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php on line 22
+[27-Sep-2016 23:34:51 America/New_York] PHP Stack trace:
+[27-Sep-2016 23:34:51 America/New_York] PHP   1. {main}() D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:0
+[27-Sep-2016 23:34:51 America/New_York] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:39
+[27-Sep-2016 23:34:51 America/New_York] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php:2
+[27-Sep-2016 23:34:51 America/New_York] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 23:34:51 America/New_York] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 23:34:51 America/New_York] PHP   6. Bootstrap->_initREST() phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php:2
+[27-Sep-2016 23:35:39 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:36:12 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:36:42 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:37:25 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:38:11 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:39:34 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:39:36 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[27-Sep-2016 23:54:15 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 00:05:08 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 00:07:41 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 00:08:24 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 01:25:41 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 01:59:11 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:00:11 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:00:58 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:03:03 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:04:25 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (index)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php(22): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): Bootstrap->_initREST()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('rest')
+#4 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php on line 2
+[28-Sep-2016 02:04:56 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (index)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php(22): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): Bootstrap->_initREST()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('rest')
+#4 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php on line 2
+[28-Sep-2016 02:05:56 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Exception' with message 'No default module defined for this application' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->getControllerClass(Object(Zend_Controller_Request_Http))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->isDispatchable(Object(Zend_Controller_Request_Http))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php(22): Zend_Controller_Front->dispatch()
+#4 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php on line 2
+[28-Sep-2016 02:06:18 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:06:26 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:06:42 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:07:11 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (index)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php(22): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): Bootstrap->_initREST()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('rest')
+#4 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/BootstrapAbstract.php(2): in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php on line 2
+[28-Sep-2016 02:07:24 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Exception' with message 'No default module defined for this application' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->getControllerClass(Object(Zend_Controller_Request_Http))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->isDispatchable(Object(Zend_Controller_Request_Http))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php(22): Zend_Controller_Front->dispatch()
+#4 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php on line 2
+[28-Sep-2016 02:07:35 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Exception' with message 'No default module defined for this application' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->getControllerClass(Object(Zend_Controller_Request_Http))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->isDispatchable(Object(Zend_Controller_Request_Http))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php(22): Zend_Controller_Front->dispatch()
+#4 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:07:44 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Exception' with message 'No default module defined for this application' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->getControllerClass(Object(Zend_Controller_Request_Http))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->isDispatchable(Object(Zend_Controller_Request_Http))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php(22): Zend_Controller_Front->dispatch()
+#4 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:07:54 America/New_York] PHP Parse error:  syntax error, unexpected '$frontController' (T_VARIABLE) in D:\Backlog\TimeSheet\PHP\etimesheets\api\application\Bootstrap.php on line 24
+[28-Sep-2016 02:07:54 America/New_York] PHP Stack trace:
+[28-Sep-2016 02:07:54 America/New_York] PHP   1. {main}() D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:0
+[28-Sep-2016 02:07:54 America/New_York] PHP   2. Zend_Application->__construct($environment = *uninitialized*, $options = *uninitialized*) D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php:36
+[28-Sep-2016 02:07:54 America/New_York] PHP   3. Zend_Application->setOptions($options = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php:2
+[28-Sep-2016 02:07:54 America/New_York] PHP   4. Zend_Application->setBootstrap($path = *uninitialized*, $class = *uninitialized*) phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php:2
+[28-Sep-2016 02:08:20 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:09:10 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:09:47 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:10:45 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php( in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:15:40 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:16:43 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:20:00 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:20:16 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:22:11 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Cannot load controller class "IndexController" from file "D:\Backlog\TimeSheet\PHP\etimesheets\api\application/modules\api\controllers\IndexController.php'' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('IndexController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+ in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:30:46 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 02:31:42 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller specified (error)' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#3 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#4 {main}
+
+Next exception 'Zend_Controller_Exception' with message 'Invalid controller specified (error)#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Control in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 04:26:46 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Cannot load controller class "IndexController" from file "D:\Backlog\TimeSheet\PHP\etimesheets\api\application\modules\api\controllers\IndexController.php'' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('IndexController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+ in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 04:34:06 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller class ("Api_ErrorController")' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('ErrorController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#4 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#5 {main}
+
+Next exceptio in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 04:34:47 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller class ("Api_ErrorController")' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('ErrorController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#4 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#5 {main}
+
+Next exceptio in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 04:36:39 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller class ("Api_ErrorController")' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('ErrorController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#4 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#5 {main}
+
+Next exceptio in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 04:37:20 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller class ("Api_ErrorController")' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('ErrorController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#4 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#5 {main}
+
+Next exceptio in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 04:37:42 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller class ("Api_ErrorController")' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('ErrorController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#4 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#5 {main}
+
+Next exceptio in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2
+[28-Sep-2016 04:39:43 America/New_York] PHP Fatal error:  Uncaught exception 'Zend_Controller_Dispatcher_Exception' with message 'Invalid controller class ("ErrorController")' in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php:2
+Stack trace:
+#0 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Dispatcher/Standard.php(2): Zend_Controller_Dispatcher_Standard->loadClass('ErrorController')
+#1 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Front.php(2): Zend_Controller_Dispatcher_Standard->dispatch(Object(REST_Controller_Request_Http), Object(REST_Response))
+#2 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application/Bootstrap/Bootstrap.php(2): Zend_Controller_Front->dispatch()
+#3 phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Application.php(2): Zend_Application_Bootstrap_Bootstrap->run()
+#4 D:\Backlog\TimeSheet\PHP\etimesheets\api\index.php(39): Zend_Application->run()
+#5 {main}
+
+Next exception 'Z in phar://D:/Backlog/TimeSheet/PHP/etimesheets/api/library/Zend.phar/Zend/Controller/Plugin/Broker.php on line 2

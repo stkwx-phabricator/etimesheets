@@ -21,18 +21,18 @@ final class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		// Add the REST route for the API module only
 		$restRoute = new Zend_Rest_Route($frontController, array(), array('api'));
 		$frontController->getRouter()->addRoute('api', $restRoute);
-		
 		$frontController->getRouter()->addRoute(
                 'index',
 		new Zend_Controller_Router_route('api/index',
 		array('module' => 'api',
                               'controller' => 'index',
                               'action' => 'get')));
+
 	}
 
 	protected function _initPpm(){
 		$ppmOptions = new Zend_Config($this->getOption("ppm"));
-		PPM_Api::init($ppmOptions->toArray());
+		 PPM_Api::init($ppmOptions->toArray());
 		PPM_ToolsRequests::init($ppmOptions->toArray());
 	}
 
