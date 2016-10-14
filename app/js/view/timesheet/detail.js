@@ -21,7 +21,7 @@ define([ 'backbone', 'text!tmpl/timesheet/detail.html','Model' ], function(Backb
 			this.tickets = options.tickets;
 			this.tickets.fetch();
 			this.listenTo(this.tickets, 'sync', this.fillProjects);
-			this.listenTo(this.tickets, 'sync', this.fillActivitys);
+			this.listenTo(this.tickets, 'sync', this.fillActivities);
 			this.listenTo(this.model,'change', function(){
 				this.render();
 				this.fillProjects(this.tickets.projects);
@@ -217,11 +217,11 @@ define([ 'backbone', 'text!tmpl/timesheet/detail.html','Model' ], function(Backb
 			    this.$el.find('#timesheet-detail-projectMenu').append(_.template(tmpl, { ticket: projectsl[i] }));
 			}
 		},
-		'fillActivitys': function (tickets) {
+		'fillActivities': function (tickets) {
 		    var tmpl = '<option id="<%- ticket.id %>" data-id="<%- ticket.id %>"><%- ticket.name %></option>';
-		    var activitysl=tickets.models[0].attributes.activitys;
-		    for (var i = 0; i < activitysl.length; i++) {
-		        this.$el.find('#timesheet-detail-activityMenu').append(_.template(tmpl, { ticket: activitysl[i] }));
+		    var activitiesl=tickets.models[0].attributes.activities;
+		    for (var i = 0; i < activitiesl.length; i++) {
+		        this.$el.find('#timesheet-detail-activityMenu').append(_.template(tmpl, { ticket: activitiesl[i] }));
 		    }
 		    $('.selectpicker').selectpicker({
 		        liveSearch: true,
