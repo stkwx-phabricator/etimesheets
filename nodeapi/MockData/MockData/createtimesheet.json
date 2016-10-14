@@ -7,12 +7,5 @@
   "state": {
     "code": 1,
     "meaning": "unsubmitted"
-  },
-  "bucketShowLevel": "DAY",
-  "bucketReportMethod": "HOURS",
-  "hoursInPeriodType": "FIXED",
-  "allowMultipleTimeSheets": true,
-  "notifyDelinquentTimeSheet": true,
-  "reqWorkItemEnabledFlag": true,
-  "tskWorkItemEnabledFlag": true
+  }
 }

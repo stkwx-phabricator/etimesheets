@@ -147,15 +147,12 @@ define([ 'backbone', 'text!tmpl/timesheet/detail.html','Model' ], function(Backb
 			var timeSheetLines = this.model.get('timeSheetLines');			
 			_.each(timeSheetLines,function(ticket){
                 var efforts = [];
-                _.each(this.$el.find('input[data-id="'+ticket.workItemId+'"]'),function(input){
+                _.each(this.$el.find('input[data-id="'+ticket.projectId+'"]'),function(input){
                     efforts.push($(input).val());
                 });
-                var sapActivity = this.$el.find('select[data-id="'+ticket.workItemId+'"]').find('option:selected');
 				var obj = {
 						timeSheetLineId  : ticket.timeSheetLineId,
-						effort : efforts.join(),
-						sapActivityId : sapActivity.val(),
-						sapActivityName : sapActivity.text()
+						effort : efforts.join()
 				};
 				data.push(obj);
 			}.bind(this));
@@ -178,15 +175,12 @@ define([ 'backbone', 'text!tmpl/timesheet/detail.html','Model' ], function(Backb
 			var timeSheetLines = this.model.get('timeSheetLines');			
 			_.each(timeSheetLines,function(ticket){
                 var efforts = [];
-                _.each(this.$el.find('input[data-id="'+ticket.workItemId+'"]'),function(input){
+                _.each(this.$el.find('input[data-id="'+ticket.projectId+'"]'),function(input){
                     efforts.push($(input).val());
                 });
-                var sapActivity = this.$el.find('select[data-id="'+ticket.workItemId+'"]').find('option:selected');
 				var obj = {
 						timeSheetLineId  : ticket.timeSheetLineId,
-						effort : efforts.join(),
-						sapActivityId : sapActivity.val(),
-						sapActivityName : sapActivity.text()
+						effort : efforts.join()
 				};
 				data.push(obj);
 			}.bind(this));

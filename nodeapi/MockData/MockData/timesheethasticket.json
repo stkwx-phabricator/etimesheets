@@ -4,12 +4,12 @@
   "timeSheetLines": [
     {
       "timeSheetLineId": 1784701,
-      "workItemId": "1635899",
+      "projectId": "1635899",
       "workItemSetId": "30650",
       "workItemType": "REQUEST",
       "state": {
         "code": 1,
-        "meaning": "unsubmitted"
+        "meaning": "saved"
       },
       "timeActualsList": [
         [

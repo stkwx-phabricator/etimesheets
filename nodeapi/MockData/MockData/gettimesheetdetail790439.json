@@ -8,44 +8,22 @@
     "code": 1,
     "meaning": "unsubmitted"
   },
-  "bucketShowLevel": "DAY",
-  "bucketReportMethod": "HOURS",
-  "hoursInPeriodType": "FIXED",
-  "allowMultipleTimeSheets": true,
-  "notifyDelinquentTimeSheet": true,
-  "reqWorkItemEnabledFlag": true,
-  "tskWorkItemEnabledFlag": true,
   "timeSheetLines": [
     {
       "timeSheetLineId": 1784701,
-      "workItemId": "1635899",
-      "workItemSetId": "30650",
-      "workItemType": "REQUEST",
+      "projectId": "1635899",
       "state": {
         "code": 1,
         "meaning": "unsubmitted"
       },
-      "timeActualsList": [
-        [
-          {
-            "totalsFlag": true,
-            "actualCost": { },
-            "effortsList": [ 0, 0, 0, 0, 0, 0, 0 ]
-          },
-          {
-            "totalsFlag": false,
-            "actualCost": { },
-            "effortsList": [ 0, 0, 0, 0, 0, 0, 0 ]
-          }
-        ]
-      ],
       "description": "Timesheet Testing",
-      "project": "GDC Operations"
+      "project": "GDC Operations",
+      "activity": "Activity Test",
+      "effortsList": [ 0, 8, 0, 0, 0, 0, 0 ]
     }
   ],
-  "sapActivities": [ ],
   "period": {
     "id": "100905",
     "name": "08\/29\/16 - 09\/04\/16"
   }
-} 
+}

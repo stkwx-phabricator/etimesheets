@@ -70,9 +70,9 @@
                 <tbody>
                     <tr>
                         <td width="5%"><input type="checkbox" value="<%- ticket.timeSheetLineId %>" class="timesheet-detail-mark-checkbox" /></td>
-                        <td width="25%"><%-ticket.description %></td>
-                        <td width="25%"><%- ticket.project %></td>
-                        <td width="45%"><%- ticket.workItemType %></td>
+                        <td width="25%"><%-ticket.project %></td>
+                        <td width="25%"><%- ticket.activity %></td>
+                        <td width="45%"><%- ticket.description %></td>
                     </tr>
                 </tbody>
             </table>
@@ -93,36 +93,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <% var actualList = typeof ticket.timeActualsList[0][0].effortsList === 'object' ? ticket.timeActualsList[0][0].effortsList :  typeof ticket.timeActualsList[0].effortsList == 'object' ? typeof ticket.timeActualsList[0].effortsList : []%>
+                        <% var actualList = ticket.effortsList %>
                         <% _.each(actualList,function(effort){ %>
                         <td width="10%">
-                            <input type="text" value="<%- effort %>" min="0" max="24" step="1" data-id="<%- ticket.workItemId %>" class="form-control input-sm" />
+                            <input type="text" value="<%- effort %>" min="0" max="24" step="1" data-id="<%- ticket.projectId %>" class="form-control input-sm" />
                         </td>
                         <%}); %>
-                        <td width="13%"><span id="res_<%- ticket.workItemId %>" class="total"><%-  _.reduce(ticket.timeActualsList[0][0].effortsList, function(memo, num){ return memo + num; }, 0) %></span></td>
+                        <td width="13%"><span id="res_<%- ticket.projectId %>" class="total"><%-  _.reduce(ticket.effortsList, function(memo, num){ return memo + num; }, 0) %></span></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div class="col-xs-12 col-md-12 timesheet-detail">
-            <ul>
-                <li>
-                    <label>
-                        SAP Activity:
-                    </label>
-                    <select name="sapactivity[]" data-id="<%- ticket.workItemId %>" class="select-sapactivity">
-                        <% if(data.sapActivities){ %>
-                        <option></option><% } %>
-                        <% _.each(data.sapActivities,function(sapActivity){%>
-                        <option value="<%- sapActivity.SAPActivityID %>"
-										<% if( typeof ticket.userDataBean !== 'undefined' && typeof ticket.userDataBean.userData2 !== 'undefined' &&  ticket.userDataBean.userData2 == sapActivity.SAPActivityID){print('selected="selected"');}%>
-									><%- sapActivity.SAPActivityName%></option>
-                        <% });%>
-                    </select>
-                </li>
-            </ul>
-        </div>
-
     </div>
     <% });%>
     <% if(data.state.code == 1 || data.state.code == 3) { %>

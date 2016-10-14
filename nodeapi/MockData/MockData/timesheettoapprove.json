@@ -7,7 +7,6 @@
     "PeriodID": 100909,
     "PeriodName": "09\/26\/16 - 10\/02\/16",
     "Project": "",
-    "SAPActivity": "",
     "TotalHours": 0
   },
   {
@@ -18,7 +17,6 @@
     "PeriodID": 100909,
     "PeriodName": "09\/26\/16 - 10\/02\/16",
     "Project": "",
-    "SAPActivity": "",
     "TotalHours": 5
   },
   {
@@ -29,8 +27,7 @@
     "PeriodID": 100910,
     "PeriodName": "10\/03\/16 - 10\/09\/16",
     "Project": "",
-    "SAPActivity": "",
-    "TotalHours": 5
+     "TotalHours": 5
   },
   {
     "UserID": 192313,
@@ -40,7 +37,6 @@
     "PeriodID": 100909,
     "PeriodName": "09\/26\/16 - 10\/02\/16",
     "Project": "",
-    "SAPActivity": "",
     "TotalHours": 0
   }
 ]

@@ -8,14 +8,6 @@
       "code": 1,
       "meaning": "unsubmitted"
     },
-    "bucketShowLevel": "DAY",
-    "bucketReportMethod": "HOURS",
-    "hoursInPeriodType": "FIXED",
-    "allowMultipleTimeSheets": true,
-    "notifyDelinquentTimeSheet": true,
-    "reqWorkItemEnabledFlag": true,
-    "tskWorkItemEnabledFlag": true,
-    "sapActivities": [ ],
     "period": {
       "id": "100911",
       "name": "10\/10\/16 - 10\/16\/16"
