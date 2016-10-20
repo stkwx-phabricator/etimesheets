@@ -20,7 +20,7 @@ db.query = function (sql, callback) {
     pool.getConnection(function (err, connection) {
         if (err)
         {
-            connection.release();
+            console.log(err);
             return;
         }
         pool.query(sql, function (err, rows, fields) {
@@ -34,5 +34,9 @@ db.query = function (sql, callback) {
             connection.release();
         });
     });
+}
+
+db.format = function (query, table) {
+    return mysql.format(query, table);
 }
 module.exports = db;  
