@@ -3,7 +3,7 @@ var db = require('../mysql.js');
 require('../common.js');
 
 function Ticket() {
-    this.login = function (logininfo, res) {
+    this.gelist = function (logininfo, res) {
         var data = {
             activities: [],
             projects:[]
@@ -30,8 +30,8 @@ function Ticket() {
                     var row = rows[i];
                     var dataitem = {
                         "id": row.id,
-                        "name": rows.name,
-                        "type": rows.type,
+                        "name": row.name,
+                        "type": row.type,
                         "setId": ''
                     }
                     if (row.type == "project") {
