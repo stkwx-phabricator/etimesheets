@@ -5,8 +5,8 @@ function Metadata() {
     this.list = function (req, res) {
         var response = { "code": '', "data": "" };
         var today = new Date();
-        var startweekday = common.getMonday(-2);
-        var endweekday = common.getMonday(2);
+        var startweekday = common.getMonday(-3);
+        var endweekday = common.getMonday(3);
         var query = "SELECT period_id as id, start_date as startDate, end_date as endDate FROM ??  where start_date between  ? and ?";
         var table = ["afsc_period", new Date(startweekday).format('yyyy-MM-dd'), new Date(endweekday).format('yyyy-MM-dd')];
         var sql = db.format(query, table);
@@ -16,7 +16,7 @@ function Metadata() {
                 res.end(err);
                 return;
             }
-            var metadata = [];
+            var metadata = { times: []};
             var data = JSON.stringify(rows);
             data = JSON.parse(data);
             if (data.length > 0) {
@@ -27,11 +27,14 @@ function Metadata() {
                         "name": new Date(row.startDate).format('MM/dd/yyyy') + "-" + new Date(row.endDate).format('MM/dd/yyyy'),
                         "startDate": new Date(row.startDate).format('yyyy-MM-dd'),
                         "endDate": new Date(row.endDate).format('yyyy-MM-dd'),
+                        "current":false
                     }
-                    metadata.push(dataitem);
+                    if (i == 3)
+                        dataitem.current = true;
+                    metadata.times.push(dataitem);
                 }
                 res.writeHead(200, { 'Content-type': 'application/json' });
-                res.end(JSON.stringify(metadata));
+                res.end( JSON.stringify(metadata));
                 return;
             }
             else {
