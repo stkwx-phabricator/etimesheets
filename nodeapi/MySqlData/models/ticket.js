@@ -3,7 +3,7 @@ var db = require('../mysql.js');
 require('../common.js');
 
 function Ticket() {
-    this.gelist = function (logininfo, res) {
+    this.getlist = function (logininfo, res) {
         var data = {
             activities: [],
             projects:[]
