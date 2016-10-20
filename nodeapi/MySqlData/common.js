@@ -1,4 +1,5 @@
-﻿Date.prototype.format = function (format) {
+﻿var common = {};
+Date.prototype.format = function (format) {
     var args = {
         "M+": this.getMonth() + 1,
         "d+": this.getDate(),
@@ -17,3 +18,9 @@
     }
     return format;
 };
+
+common.getMonday=function (offset) {
+    var d = new Date(); return new Date(d - ((d.getDay() || 7) - 1 - (offset || 0) * 7) * 864E5);
+}
+
+module.exports = common; 
