@@ -10,48 +10,119 @@ POST    /api/user   $user.login
 */
 
 module.exports = {
-    configure: function (app)
-    {
+    configure: function (app) {
         //get
         app.get('/api/metadata', function (req, res) {
-            $meta.get(req, res);
+            if (req.session.user) {
+                $meta.get(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
         });
         app.get('/api/ticket', function (req, res) {
-            $ticket.get(req, res);
+            if (req.session.user) {
+                $ticket.get(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
         })
         app.get('/api/timesheet', function (req, res) {
-            $timesheet.get(req,res);
+            if (req.session.user) {
+                $timesheet.get(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
         })
         app.get('/api/timesheet/:id', function (req, res) {
-            $timesheet.getwithids(req, res);
+            if (req.session.user) {
+                $timesheet.getwithids(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
         })
         app.get('/api/timesheettoapprove', function (req, res) {
-            $timesheettoapprove.get(req, res);
+            if (req.session.user) {
+                $timesheettoapprove.get(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
+
         })
         //post
         app.post('/api/user', function (req, res) {
             $user.login(req, res);
         });
         app.post('/api/timesheet', function (req, res) {
-            $timesheet.post(req, res);
+            if (req.session.user) {
+                $timesheet.post(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
         })
         app.post('/api/timesheethasticket', function (req, res) {
-            $timesheethasticket.post(req, res);
+            if (req.session.user) {
+                $timesheethasticket.post(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
+
         })
         //put
         app.put('/api/timesheet/:id', function (req, res) {
-            $timesheet.put(req, res);
+            if (req.session.user) {
+                $timesheet.put(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
+
         })
         app.put('/api/timesheethasticket', function (req, res) {
-            $timesheethasticket.put(req, res);
+            if (req.session.user) {
+                $timesheethasticket.put(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
+
         })
 
         app.put('/api/timesheettoapprove/?id', function (req, res) {
-            $timesheettoapprove.put(req, res);
+            if (req.session.user) {
+                $timesheettoapprove.put(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
+
         })
         //delete
         app.delete('/api/timesheettoapprove/?id', function (req, res) {
-            $timesheettoapprove.delete(req, res);
+            if (req.session.user) {
+                $timesheettoapprove.delete(req, res);
+            }
+            else {
+                req.session.error = 'Access denied!';
+                res.redirect('/');
+            }
+
         })
 
     }

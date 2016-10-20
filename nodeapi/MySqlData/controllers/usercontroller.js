@@ -1,5 +1,5 @@
 ﻿var User = require('../models/user');
 
 exports.login = function(req,res,next) {
-    User.login(req.body, res);
+    User.login(req, res);
 }

@@ -3,7 +3,8 @@ var db = require('../mysql.js');
 require('../common.js');
 
 function User() {
-    this.login = function (logininfo,res) {
+    this.login = function (req, res) {
+        var logininfo = req.body;
         //decode password
         var md5 = crypto.createHash('md5');
         md5.update(logininfo.password + '' + logininfo.password);
@@ -33,6 +34,8 @@ function User() {
                     "resourceId": data.EMPID,
                     "is_approver": data.ISAPPROVER
                 }
+                req.session.user = user;
+                req.session.success = true;
                 res.writeHead(200, { 'Content-type': 'application/json' });
                 res.end(JSON.stringify(user));
             }
