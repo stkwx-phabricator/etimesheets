@@ -9,6 +9,6 @@ exports.post = function (req, res) {
 exports.put = function (req, res) {
     Timesheet.puttimesheet(req.body, res);
 }
-exports.getwithid = function (req, res) {
+exports.getwithids = function (req, res) {
     Timesheet.gettimesheetdetail(req, res);
 }

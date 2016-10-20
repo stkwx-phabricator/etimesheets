@@ -7,7 +7,9 @@ var pool = mysql.createPool({
     port: config.dbinfo.port,
     user: config.dbinfo.username,
     password: config.dbinfo.password,
-    database: config.dbinfo.dbname
+    database: config.dbinfo.dbname,
+    acquireTimeout:100000,
+    multipleStatements: true
 });
 
 
@@ -39,4 +41,4 @@ db.query = function (sql, callback) {
 db.format = function (query, table) {
     return mysql.format(query, table);
 }
-module.exports = db;  
+module.exports = db;

@@ -31,6 +31,7 @@ module.exports = {
             }
         })
         app.get('/api/timesheet', function (req, res) {
+          console.log('-------route:'+JSON.stringify(req.session.user))
             if (req.session.user) {
                 $timesheet.get(req, res);
             }

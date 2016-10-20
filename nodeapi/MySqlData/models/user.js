@@ -36,6 +36,7 @@ function User() {
                 }
                 req.session.user = user;
                 req.session.success = true;
+                console.log("-------login:"+JSON.stringify(req.session.user));
                 res.writeHead(200, { 'Content-type': 'application/json' });
                 res.end(JSON.stringify(user));
             }
