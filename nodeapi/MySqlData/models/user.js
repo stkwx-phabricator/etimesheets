@@ -19,6 +19,7 @@ function User() {
                 return;
             }
             if (rows.length != undefined) {
+
                 var curdate = new Date();
                 var expiredate = new Date();
                 expiredate.setHours(expiredate.getHours() + 1);
@@ -32,11 +33,11 @@ function User() {
                     "token_lastuse": curdate.format("yyyy-MM-dd hh:mm:ss"),
                     "token_expire": expiredate.format("yyyy-MM-dd hh:mm:ss"),
                     "resourceId": data.EMPID,
-                    "is_approver": data.ISAPPROVER
+                    "is_approver": data.ISAPPROVER==true?"1":"0"
                 }
+
                 req.session.user = user;
                 req.session.success = true;
-                console.log("-------login:"+JSON.stringify(req.session.user));
                 res.writeHead(200, { 'Content-type': 'application/json' });
                 res.end(JSON.stringify(user));
             }

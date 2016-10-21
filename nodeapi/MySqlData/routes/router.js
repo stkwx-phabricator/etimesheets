@@ -31,7 +31,6 @@ module.exports = {
             }
         })
         app.get('/api/timesheet', function (req, res) {
-          console.log('-------route:'+JSON.stringify(req.session.user))
             if (req.session.user) {
                 $timesheet.get(req, res);
             }
@@ -65,7 +64,7 @@ module.exports = {
         });
         app.post('/api/timesheet', function (req, res) {
             if (req.session.user) {
-                $timesheet.post(req, res);
+                $timesheet.postperiodid(req, res);
             }
             else {
                 req.session.error = 'Access denied!';
