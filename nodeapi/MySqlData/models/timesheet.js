@@ -111,11 +111,7 @@ function Timesheet() {
     this.gettimesheetdetail = function (req, res) {
         var data;
         //Define sql
-        var sql = "select distinct tm.RESOURCE_ID,tm.PERIOD_ID,tm.TIME_SHEET_ID,tm.DESCRIPTION,tm.SEQ,tm.STATE_CODE,s.STATE_NAME,pe.START_DATE,pe.END_DATE,tml.TIME_SHEET_LINE_ID, tml.PROJECT_ID, tml.STATE_CODE as LINE_STATE_CODE,s.STATE_NAME as LINE_STATE_NAME, tml.EFFORTS_LIST,tml.ACTUAL_APPROVER_USERID,tml.DESCRIPTION as LINE_DESCRIPTION, p.NAME, a.ACTIVITY_NAME" +
-            " from afsc_timesheet tm, afsc_timesheet_line tml, afsc_timesheet_state s, afsc_period pe, afsc_project P, afsc_ACTIVITY a " +
-            " where tml.ACTUAL_APPROVER_USERID and s.STATE_Code=tm.STATE_Code and pe.PERIOD_ID=tm.PERIOD_ID and p.ID =tml.PROJECT_ID and a.ACTIVITY_ID=tml.ACTIVITY_ID and tm.TIME_SHEET_ID=tml.TIME_SHEET_ID and tm.TIME_SHEET_ID=?";
-        var table = [req.params.id];
-        sql = db.format(sql, table);
+        var sql = "call sp_GetTimesheetDetail (" + req.params.id + ")";
         console.log(sql);
         //Execute Query
         db.query(sql, function (err, rows) {
@@ -125,7 +121,10 @@ function Timesheet() {
                 return;
             }
             if (rows.length != undefined) {
+                console.log("ROWS" + rows);
+                rows = rows[0];
                 if (rows[0].TIME_SHEET_LINE_ID == null) {
+                    console.log("---IF");
                     var row = rows[0];
                     var dataitem = {
                         "resourceId": row.RESOURCE_ID,
@@ -145,6 +144,8 @@ function Timesheet() {
                     data = dataitem;
                 }
                 else {
+                    console.log("---ELSE");
+                    console.log("rows:" + rows.length);
                     var dataitem = {
                         "resourceId": rows[0].RESOURCE_ID,
                         "periodId": rows[0].PERIOD_ID,
