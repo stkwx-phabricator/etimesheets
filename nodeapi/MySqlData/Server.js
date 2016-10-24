@@ -1,18 +1,23 @@
-﻿var express = require('express');
-var bodyparser = require('body-parser');
-var routes = require('./routes/router');
+﻿
+var express = require('express');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
-
+var favicon = require('favicon');
+var bodyparser = require('body-parser');
+var routes = require('./routes/router');
 var app = express();
+
+
+
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
-app.use(cookieParser());
+app.use(cookieParser('timesheet'));
+//app.use(favicon);
 app.use(session({
     resave: true, // don't save session if unmodified
     saveUninitialized: false, // don't create session until something stored
     name: 'timesheet.sid',   //
-    cookie: {maxAge: 1800000 },  //save login for 30 min
+    cookie: { maxAge: 1800000 },  //save login for 30 min
     secret: 'timesheet'
 }));
 

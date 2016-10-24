@@ -24,7 +24,8 @@ define(['backbone', 'text!tmpl/timesheet/detail.html', 'Model'], function (Backb
             this.listenTo(this.tickets, 'sync', this.fillActivities);
             this.listenTo(this.model, 'change', function () {
                 this.render();
-                this.fillProjects(this.tickets.projects);
+                this.fillProjects(this.tickets);
+                this.fillActivities(this.tickets);
             }.bind(this));
         },
         render: function () {
@@ -93,8 +94,10 @@ define(['backbone', 'text!tmpl/timesheet/detail.html', 'Model'], function (Backb
         'ticket-addRecent': function (event) {
             event.preventDefault();
             var ticket = new Model.Timesheet_Ticket(),
-			projectid = $("#timesheet-detail-projectMenu").item($("#timesheet-detail-projectMenu").selectedIndex).id,
-			    activityid = $("#timesheet-detail-activityMenu").item($("#timesheet-detail-activityMenu").selectedIndex).id;
+             projectmenu = $("#timesheet-detail-projectMenu")[0],
+             activitymenu = $("#timesheet-detail-activityMenu")[0];
+            var projectid = projectmenu.item(projectmenu.selectedIndex).id,
+             activityid = activitymenu.item(activitymenu.selectedIndex).id;
 
             var data = {
                 timesheet_id: this.model.id,
@@ -123,7 +126,7 @@ define(['backbone', 'text!tmpl/timesheet/detail.html', 'Model'], function (Backb
 				max = parseFloat(el.attr("max")) || 24,
 				newVal;
 
-            var data = this.$el.find('input[data-id="' + ticketId + '"]');
+            var data = this.$el.find('.efforts[data-id="' + ticketId + '"]');
 
             _.each(data, function (item) {
                 sum += parseFloat($(item).val());
@@ -148,12 +151,14 @@ define(['backbone', 'text!tmpl/timesheet/detail.html', 'Model'], function (Backb
             var timeSheetLines = this.model.get('timeSheetLines');
             _.each(timeSheetLines, function (ticket) {
                 var efforts = [];
-                _.each(this.$el.find('input[data-id="' + ticket.projectId + '"]'), function (input) {
+                _.each(this.$el.find('.efforts[data-id="' + ticket.projectId + '"]'), function (input) {
                     efforts.push($(input).val());
                 });
+                var description = this.$el.find('.description[data-id="' + ticket.projectId + '"]').val();
                 var obj = {
                     timeSheetLineId: ticket.timeSheetLineId,
-                    effort: efforts.join()
+                    effort: efforts.join(),
+                    description:description
                 };
                 data.push(obj);
             }.bind(this));
@@ -178,12 +183,14 @@ define(['backbone', 'text!tmpl/timesheet/detail.html', 'Model'], function (Backb
             var timeSheetLines = this.model.get('timeSheetLines');
             _.each(timeSheetLines, function (ticket) {
                 var efforts = [];
-                _.each(this.$el.find('input[data-id="' + ticket.projectId + '"]'), function (input) {
+                _.each(this.$el.find('.efforts[data-id="' + ticket.projectId + '"]'), function (input) {
                     efforts.push($(input).val());
                 });
+                var description = this.$el.find('.description[data-id="'+ticket.projectId+'"]').val();
                 var obj = {
                     timeSheetLineId: ticket.timeSheetLineId,
-                    effort: efforts.join()
+                    effort: efforts.join(),
+                    description:description
                 };
                 data.push(obj);
             }.bind(this));

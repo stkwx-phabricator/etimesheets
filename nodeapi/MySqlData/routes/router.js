@@ -14,6 +14,7 @@ module.exports = {
         //get
         app.get('/api/metadata', function (req, res) {
             if (req.session.user) {
+                req.session.user = req.session.user;
                 $meta.get(req, res);
             }
             else {
@@ -23,6 +24,7 @@ module.exports = {
         });
         app.get('/api/ticket', function (req, res) {
             if (req.session.user) {
+                req.session.user = req.session.user;
                 $ticket.get(req, res);
             }
             else {
@@ -32,6 +34,7 @@ module.exports = {
         })
         app.get('/api/timesheet', function (req, res) {
             if (req.session.user) {
+                req.session.user = req.session.user;
                 $timesheet.get(req, res);
             }
             else {
@@ -41,6 +44,7 @@ module.exports = {
         })
         app.get('/api/timesheet/:id', function (req, res) {
             if (req.session.user) {
+                req.session.user = req.session.user;
                 $timesheet.getwithids(req, res);
             }
             else {
@@ -50,6 +54,7 @@ module.exports = {
         })
         app.get('/api/timesheettoapprove', function (req, res) {
             if (req.session.user) {
+                req.session.user = req.session.user;
                 $timesheettoapprove.get(req, res);
             }
             else {
@@ -64,7 +69,8 @@ module.exports = {
         });
         app.post('/api/timesheet', function (req, res) {
             if (req.session.user) {
-                $timesheet.postperiodid(req, res);
+                req.session.user = req.session.user;
+                $timesheet.post(req, res);
             }
             else {
                 req.session.error = 'Access denied!';
@@ -73,6 +79,7 @@ module.exports = {
         })
         app.post('/api/timesheethasticket', function (req, res) {
             if (req.session.user) {
+                req.session.user = req.session.user;
                 $timesheethasticket.post(req, res);
             }
             else {
@@ -84,6 +91,7 @@ module.exports = {
         //put
         app.put('/api/timesheet/:id', function (req, res) {
             if (req.session.user) {
+                req.session.user = req.session.user;
                 $timesheet.put(req, res);
             }
             else {
@@ -94,6 +102,7 @@ module.exports = {
         })
         app.put('/api/timesheethasticket', function (req, res) {
             if (req.session.user) {
+                req.session.user = req.session.user;
                 $timesheethasticket.put(req, res);
             }
             else {
@@ -103,8 +112,9 @@ module.exports = {
 
         })
 
-        app.put('/api/timesheettoapprove/?id', function (req, res) {
+        app.put('/api/timesheettoapprove/:id', function (req, res) {
             if (req.session.user) {
+                req.session.user = req.session.user;
                 $timesheettoapprove.put(req, res);
             }
             else {
@@ -114,8 +124,9 @@ module.exports = {
 
         })
         //delete
-        app.delete('/api/timesheettoapprove/?id', function (req, res) {
+        app.delete('/api/timesheet/:id', function (req, res) {
             if (req.session.user) {
+                req.session.user = req.session.user;
                 $timesheettoapprove.delete(req, res);
             }
             else {

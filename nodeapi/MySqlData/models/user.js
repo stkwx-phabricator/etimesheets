@@ -28,7 +28,7 @@ function User() {
                 var user = {
                     "id": data.EMPID,
                     "username": data.FIRST_NAME + ' ' + data.LAST_NAME,
-                    "token": logininfo.token,
+                    "token": data.token,
                     "token_issued": curdate.format("yyyy-MM-dd hh:mm:ss"),
                     "token_lastuse": curdate.format("yyyy-MM-dd hh:mm:ss"),
                     "token_expire": expiredate.format("yyyy-MM-dd hh:mm:ss"),

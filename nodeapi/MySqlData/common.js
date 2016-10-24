@@ -19,8 +19,13 @@ Date.prototype.format = function (format) {
     return format;
 };
 
-common.getMonday=function (offset) {
+common.getMonday = function (offset) {
     var d = new Date(); return new Date(d - ((d.getDay() || 7) - 1 - (offset || 0) * 7) * 864E5);
 }
-
+Array.prototype.remove = function (val) {
+    var index = this.indexOf(val);
+    if (index > -1) {
+        this.splice(index, 1);
+    }
+};
 module.exports = common; 

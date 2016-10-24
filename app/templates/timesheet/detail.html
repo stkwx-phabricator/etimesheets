@@ -12,14 +12,11 @@
         <div class="btn-toolbar">
             <div class="btn-group">
                 <label for="timesheet-detail-projectMenu">Project:</label>
-                <select class="selectpicker" id="timesheet-detail-projectMenu">                   
-                </select>
+                <select class="selectpicker" id="timesheet-detail-projectMenu"></select>
             </div>
             <div class="btn-group">
                 <label for="timesheet-detail-activityMenu">Activity:</label>
-                <select class="selectpicker" id="timesheet-detail-activityMenu">
-                   
-                </select>
+                <select class="selectpicker" id="timesheet-detail-activityMenu"></select>
             </div>
             <div class="btn-group">
                 <button type="button" class="btn btn-success" id="timesheet-detail-add">Add</button>
@@ -72,7 +69,9 @@
                         <td width="5%"><input type="checkbox" value="<%- ticket.timeSheetLineId %>" class="timesheet-detail-mark-checkbox" /></td>
                         <td width="25%"><%-ticket.project %></td>
                         <td width="25%"><%- ticket.activity %></td>
-                        <td width="45%"><%- ticket.description %></td>
+                        <td width="45%">
+                            <input type="text" data-id="<%- ticket.projectId %>" value="<%- ticket.description %>"   min="0" max="24" step="1" class="form-control description" />
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -96,7 +95,7 @@
                         <% var actualList = ticket.effortsList %>
                         <% _.each(actualList,function(effort){ %>
                         <td width="10%">
-                            <input type="text" value="<%- effort %>" min="0" max="24" step="1" data-id="<%- ticket.projectId %>" class="form-control input-sm" />
+                            <input type="text" value="<%- effort %>" min="0" max="24" step="1" data-id="<%- ticket.projectId %>" class="form-control input-sm efforts" />
                         </td>
                         <%}); %>
                         <td width="13%"><span id="res_<%- ticket.projectId %>" class="total"><%-  _.reduce(ticket.effortsList, function(memo, num){ return memo + num; }, 0) %></span></td>

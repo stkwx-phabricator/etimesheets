@@ -9,22 +9,19 @@ function Ticket() {
             projects:[]
         }
         //Define sql
-        var sql = " select ACTIVITY_ID as id, ACTIVITY_NAME as name, 'activity' as type  from ??"+
+        var sql = " select ACTIVITY_ID as id, ACTIVITY_NAME as name, 'activity' as type  from afsc_activity"+ 
        " union all"+
-       " select project_id as  id , NAME as name, 'project' as type from ?? limit 10";
-        var table = ["afsc_activity", "afsc_project"];
-         sql = db.format(sql, table);
-         console.log(sql);
+       " select  ID , NAME as name, 'project' as type from afsc_project";
+        //var table = ["afsc_activity", "afsc_project"];
+        // sql = db.format(sql, table);
 
         //Execute Query
-        db.query(sql, function (err, rows) {
+         db.query(sql, function (err, rows) {
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
                 return;
             }
-            console.log(rows);
-            console.log(rows.length);
             if (rows.length != undefined) {
                 for (var i = 0; i < rows.length; i++) {
                     var row = rows[i];
@@ -41,7 +38,7 @@ function Ticket() {
                     {
                         data.activities.push(dataitem);
                     }
-
+ 
                 }
                 res.writeHead(200, { 'Content-type': 'application/json' });
                 res.end(JSON.stringify(data));

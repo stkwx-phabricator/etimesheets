@@ -1,12 +1,12 @@
-﻿var Timesheet = require('../models/timesheettoapprove');
+﻿var Toapprove = require('../models/timesheettoapprove');
 
 exports.get = function (req, res) {
-    Timesheet.getlist(req, res);
+    Toapprove.getlist(req, res);
 }
 
 exports.put = function (req, res) {
-    Timesheet.putapprove(req.body, res);
+    Toapprove.putapprove(req, res);
 }
 exports.delete = function (req, res) {
-    Timesheet.deletereject(req, res);
+    Toapprove.deletereject(req, res);
 }

@@ -7,7 +7,7 @@ exports.post = function (req, res) {
     Timesheet.postperiodid(req, res);
 }
 exports.put = function (req, res) {
-    Timesheet.puttimesheet(req.body, res);
+    Timesheet.puttimesheet(req, res);
 }
 exports.getwithids = function (req, res) {
     Timesheet.gettimesheetdetail(req, res);
