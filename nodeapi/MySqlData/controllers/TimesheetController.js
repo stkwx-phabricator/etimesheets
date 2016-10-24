@@ -4,7 +4,7 @@ exports.get = function (req, res) {
     Timesheet.getidlist(req, res);
 }
 exports.post = function (req, res) {
-    Timesheet.postperiodid(req.body, res);
+    Timesheet.postperiodid(req, res);
 }
 exports.put = function (req, res) {
     Timesheet.puttimesheet(req.body, res);
