@@ -35,34 +35,34 @@ function Timesheet() {
     }
 
     this.postperiodid = function (req, res) {
-        //Define sql
-        var sql = "INSERT INTO afsc_timesheet (RESOURCE_ID, PERIOD_ID, STATE_CODE, CREATED_BY ) VALUES (?, ?, ?, ?)"; //  "select * from afsc_period where PERIOD_ID = ?";
-        var table = ["317", req.periodId, "1", "", req.periodId];
-        sql = db.format(sql, table); //mysql.format(sql, table);
-
+      var resourceId = req.session.user.resourceId;
+      var periodId = req.body.periodId;
+      var sql = "call sp_createTimesheet (" + periodId+", "+resourceId + ")";
         //Execute Query
         db.query(sql, function (err, rows) {
+          var row0= rows[0];//JSON.stringify(rows[0]);
+          var row1= rows[1];
+          var period = row0[0].START_DATE.format("MM/dd/yyyy")+"-"+ row0[0].END_DATE.format("MM/dd/yyyy");
+          var timeSheetId = row1[0].TIME_SHEET_ID;
+          var description = req.session.user.username+" - "+ period;
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
                 return;
             }
-            //  if (rows.length != undefined) {
-            // var data = JSON.stringify(rows[0][0]);
-            // data = JSON.parse(data);
             dataitem = {
-                "resourceId": "317",
-                "periodId": req.periodId,
-                "timeSheetId": rows.insertId,
-                "description": "Lemon Yang - 10\/10\/16 - 10\/16\/16",
+                "resourceId": resourceId,
+                "periodId": periodId,
+                "timeSheetId": timeSheetId,
+                "description": description,
                 "sequence": 1,
                 "state": {
                     "code": 1,
                     "meaning": "unsubmitted"
                 },
                 "period": {
-                    "id": req.periodId,
-                    "name": "10\/10\/16 - 10\/16\/16"
+                    "id": periodId,
+                    "name": period
                 }
             };
             res.writeHead(200, { 'Content-type': 'application/json' });
@@ -112,16 +112,17 @@ function Timesheet() {
         var data;
         //Define sql
         var sql = "call sp_GetTimesheetDetail (" + req.params.id + ")";
-        console.log(sql);
+        //console.log(sql);
         //Execute Query
         db.query(sql, function (err, rows) {
+          // console.log("call sp_GetTimesheetDetail rows: ",rows);
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
                 return;
             }
             if (rows.length != undefined) {
-                console.log("ROWS" + rows);
+                //console.log("ROWS" + rows);
                 rows = rows[0];
                 if (rows[0].TIME_SHEET_LINE_ID == null) {
                     console.log("---IF");
@@ -144,8 +145,8 @@ function Timesheet() {
                     data = dataitem;
                 }
                 else {
-                    console.log("---ELSE");
-                    console.log("rows:" + rows.length);
+                    //console.log("---ELSE");
+                    //console.log("rows:" + rows.length);
                     var dataitem = {
                         "resourceId": rows[0].RESOURCE_ID,
                         "periodId": rows[0].PERIOD_ID,
@@ -164,7 +165,7 @@ function Timesheet() {
                     }
                     for (var i = 0; i < rows.length; i++) {
                         var row = rows[i];
-                        console.log("-------------row:" + row);
+                        // console.log("-------------row:" + row);
                         dataitem.timeSheetLines.push({
                             "timeSheetLineId": row.TIME_SHEET_LINE_ID,
                             "projectId": row.PROJECT_ID,
@@ -184,7 +185,7 @@ function Timesheet() {
                 }
                 res.writeHead(200, { 'Content-type': 'application/json' });
                 res.end(JSON.stringify(data));
-                console.log('-----------Details:' + JSON.stringify(data));
+                // console.log('-----------Details:' + JSON.stringify(data));
             }
             else {
                 res.writeHead(404, { 'Content-type': 'application/json' });
