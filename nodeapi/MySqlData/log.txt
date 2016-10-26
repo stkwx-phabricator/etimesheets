@@ -1,0 +1,2 @@
+
+--[Wed Oct 26 2016 16:33:39 GMT+0800 (China Standard Time)]: {"code":"ER_PARSE_ERROR","errno":1064,"sqlState":"42000","index":0} : ---

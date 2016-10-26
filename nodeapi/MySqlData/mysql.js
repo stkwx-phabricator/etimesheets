@@ -1,13 +1,15 @@
 ﻿var db = {};
 var mysql = require('mysql');
 var config = require('./config');
+var mylogger = require('./mylogger')
 
 var pool = mysql.createPool({
     host: config.dbinfo.host,
     port: config.dbinfo.port,
     user: config.dbinfo.username,
     password: config.dbinfo.password,
-    database: config.dbinfo.dbname
+    database: config.dbinfo.dbname,
+    acquireTimeout:100000,
 });
 
 
@@ -21,12 +23,14 @@ db.query = function (sql, callback) {
         if (err)
         {
             console.log(err);
+            errorlog(err);
             return;
         }
         pool.query(sql, function (err, rows, fields) {
             if (err) {
                 console.log(err);
-                callback(err, null);
+                mylogger(err);
+                //callback(err, null);
                 return;
             };
 
@@ -39,4 +43,4 @@ db.query = function (sql, callback) {
 db.format = function (query, table) {
     return mysql.format(query, table);
 }
-module.exports = db;  
+module.exports = db;

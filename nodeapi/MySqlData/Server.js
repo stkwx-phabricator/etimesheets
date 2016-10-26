@@ -8,10 +8,10 @@ var routes = require('./routes/router');
 var app = express();
 
 
-
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(cookieParser('timesheet'));
+
 //app.use(favicon);
 app.use(session({
     resave: true, // don't save session if unmodified
