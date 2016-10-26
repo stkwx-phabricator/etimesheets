@@ -23,7 +23,7 @@ db.query = function (sql, callback) {
         if (err)
         {
             console.log(err);
-            errorlog(err);
+            mylogger(err);
             return;
         }
         pool.query(sql, function (err, rows, fields) {
