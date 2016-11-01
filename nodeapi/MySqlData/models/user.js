@@ -33,11 +33,12 @@ function User() {
                     "token_lastuse": curdate.format("yyyy-MM-dd hh:mm:ss"),
                     "token_expire": expiredate.format("yyyy-MM-dd hh:mm:ss"),
                     "resourceId": data.EMPID,
-                    "is_approver": data.ISAPPROVER==true?"1":"0"
+                    "is_approver": data.ISAPPROVER == true ? "1" : "0",
+                    "path":'/'
                 }
-
                 req.session.user = user;
                 req.session.success = true;
+                user.token = req.sessionID;
                 res.writeHead(200, { 'Content-type': 'application/json' });
                 res.end(JSON.stringify(user));
             }
@@ -46,6 +47,18 @@ function User() {
                 res.end('User name or Password invalid!');
             }
         });
+    },
+        this.user = function (req) {
+        var sessionuser;
+        if (req.session.user) {
+            sessionuser = req.session.user;
+        }
+        else
+        {
+            var sessionid = req.headers.authorization.split(' ').length > 1 ? req.headers.authorization.split(' ')[1] : req.headers.authorization;
+            sessionuser = req.sessionStore.sessions[sessionid] != undefined ? JSON.parse(req.sessionStore.sessions[sessionid]).user : undefined;
+        }
+        return sessionuser;
     }
 }
 module.exports = new User();
