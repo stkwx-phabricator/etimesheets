@@ -2,6 +2,7 @@
 	<div class="panel-heading">
 		My Work Items
 	</div>
+    <% var isVisible;%>
 	<table class="table">
 		<thead>
 			<tr>
@@ -11,9 +12,10 @@
 			</tr>
 		</thead>
 		<tbody>
-			<% _.each(tickets,function(ticket){%>
-				
-			<tr>
+			<% _.each(tickets,function(ticket){
+				isVisible=ticket.id>20?"display:none":"";
+            %>
+			<tr class="123" style="<%=isVisible%>">
 				<td width="10%"><%=ticket.id %></td>
 				<td width="50%"><%= ticket.name %></td>
 				<td width="15%"><%= ticket.type %></td>					
