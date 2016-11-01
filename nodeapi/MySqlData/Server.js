@@ -6,7 +6,7 @@ var favicon = require('favicon');
 var bodyparser = require('body-parser');
 var routes = require('./routes/router');
 var app = express();
-
+var logger = require('./logger.js');
 
 
 app.use(bodyparser.urlencoded({ extended: true }));
@@ -37,4 +37,5 @@ routes.configure(app);
 
 var server = app.listen(8081, function () {
     console.log('Server listening on port ' + server.address().port);
+    logger.info('Server listening on port ' + server.address().port);
 });

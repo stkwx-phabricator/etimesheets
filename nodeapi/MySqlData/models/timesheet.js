@@ -1,5 +1,7 @@
 ﻿var db = require('../mysql.js');
 require('../common.js');
+var logger = require('../logger.js');
+
 
 function Timesheet() {
     this.getidlist = function (req, res) {
@@ -43,6 +45,7 @@ function Timesheet() {
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
+                logger.error(err);
                 return;
             }
             if (rows.length != undefined) {
@@ -71,12 +74,12 @@ function Timesheet() {
     this.puttimesheet = function (req, res) {
         //Define sql
         var sql = 'call sp_AuditTimesheet ("' + req.body.timeSheetId + '","' + req.session.user.id + '",0)';
-        console.log('####--' + sql);
         //Execute Query
         db.query(sql, function (err, rows) {
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
+                logger.error(err);
                 return;
             }
             var data;
@@ -88,6 +91,7 @@ function Timesheet() {
                 if (err) {
                     res.writeHead(503, { 'Content-type': 'application/json' });
                     res.end(err);
+                    logger.error(err);
                     return;
                 }
                 if (rows.length != undefined) {
@@ -171,6 +175,7 @@ function Timesheet() {
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
+                logger.error(err);
                 return;
             }
             if (rows.length != undefined) {

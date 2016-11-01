@@ -1,5 +1,7 @@
 ﻿var db = require('../mysql.js');
 require('../common.js');
+var logger = require('../logger.js');
+
 
 function Timesheettoapprove() {
     this.getlist = function (req, res) {
@@ -14,6 +16,7 @@ function Timesheettoapprove() {
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
+                logger.error(err);
                 return;
             }
             if (rows.length != undefined) {
@@ -49,6 +52,7 @@ function Timesheettoapprove() {
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
+                logger.error(err);
                 return;
             }
             res.writeHead(200, { 'Content-type': 'application/json' });

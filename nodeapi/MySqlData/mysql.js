@@ -1,6 +1,8 @@
 ﻿var db = {};
 var mysql = require('mysql');
 var config = require('./config');
+var logger = require('./logger.js');
+
 
 var pool = mysql.createPool({
     host: config.dbinfo.host,
@@ -20,12 +22,12 @@ db.query = function (sql, callback) {
     pool.getConnection(function (err, connection) {
         if (err)
         {
-            console.log(err);
+            logger.error(err);
             return;
         }
         pool.query(sql, function (err, rows, fields) {
             if (err) {
-                console.log(err);
+                logger.error(err);
                 callback(err, null);
                 return;
             };

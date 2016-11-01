@@ -1,5 +1,6 @@
 ﻿var db = require('../mysql.js');
 require('../common.js');
+var logger = require('../logger.js');
 
 function Ticket() {
 
@@ -11,6 +12,7 @@ function Ticket() {
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
+                logger.error(err);
                 return;
             }
             if (rows.length != undefined) {
@@ -52,6 +54,7 @@ function Ticket() {
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
+                logger.error(err);
                 return;
             }
             if (rows.length != undefined) {
@@ -61,54 +64,66 @@ function Ticket() {
                     var row = rows[i];
                     oldarray.push(row.TIME_SHEET_LINE_ID);
                 }
-                console.log(oldarray);
+                logger.trace(oldarray.length);
                 //MAIN-SAVE THE UPDATES.
                 var count = 0;
-                for (var i = 0; i < linedata.length; i++) {
-                    var data = linedata[i];
-                    //Define sql
-                    var sql = 'call sp_SaveTimesheetLine (' + req.session.user.id + ',' + data.timeSheetLineId + ',' + 1 + ',"[' + data.effort + ']","' + data.description + '")';
-                    //Delete the id if it is updated
-                    if (oldarray.length != 0) {
-                        oldarray.remove(data.timeSheetLineId);
-                        console.log("timesheetid:" + data.timeSheetLineId);
-                        console.log(oldarray);
-                    }
-                    //Execute Query
+                if (linedata.length == 0) {
+                    var sql = 'delete from afsc_timesheet_line where TIME_SHEET_ID=' + req.body.id;
                     db.query(sql, function (err, rows) {
                         if (err) {
                             res.writeHead(503, { 'Content-type': 'application/json' });
                             res.end(err);
                             return;
                         }
-                        count++;
-                        if (count == linedata.length) {
-                            //MAIN-DELTE
-                            var deletecount = 0;
-                            console.log("Delete:" + oldarray);
-                            if (oldarray.length == 0)
-                            {
-                                GetTimesheetDetail(req.body.id, res);
-                            }
-                            else {
-                                for (var i = 0; i < oldarray.length; i++) {
-                                    var sql = 'delete from afsc_timesheet_line where TIME_SHEET_LINE_ID=' + oldarray[i];
-                                    db.query(sql, function (err, rows) {
-                                        if (err) {
-                                            res.writeHead(503, { 'Content-type': 'application/json' });
-                                            res.end(err);
-                                            return;
-                                        }
-                                        deletecount++;
-                                        if (deletecount == oldarray.length) {
-                                            GetTimesheetDetail(req.body.id, res);
-                                        }
-                                    });
-                                }
-                            }
-
-                        }
+                        GetTimesheetDetail(req.body.id, res);
                     });
+                }
+                else {
+                    for (var i = 0; i < linedata.length; i++) {
+                        var data = linedata[i];
+                        //Define sql
+                        var sql = 'call sp_SaveTimesheetLine (' + req.session.user.id + ',' + data.timeSheetLineId + ',' + 1 + ',"[' + data.effort + ']","' + data.description + '")';
+                        //Delete the id if it is updated
+                        if (oldarray.length != 0) {
+                            oldarray.remove(data.timeSheetLineId);
+                        }
+                        //Execute Query
+                        db.query(sql, function (err, rows) {
+                            if (err) {
+                                res.writeHead(503, { 'Content-type': 'application/json' });
+                                res.end(err);
+                                logger.error(err);
+                                return;
+                            }
+                            count++;
+                            if (count == linedata.length) {
+                                //MAIN-DELTE
+                                var deletecount = 0;
+                                if (oldarray.length == 0) {
+                                    GetTimesheetDetail(req.body.id, res);
+                                }
+                                else {
+                                    for (var i = 0; i < oldarray.length; i++) {
+                                        var sql = 'delete from afsc_timesheet_line where TIME_SHEET_LINE_ID=' + oldarray[i];
+                                        db.query(sql, function (err, rows) {
+                                            if (err) {
+                                                res.writeHead(503, { 'Content-type': 'application/json' });
+                                                res.end(err);
+                                                return;
+                                            }
+                                            deletecount++;
+                                            if (deletecount == oldarray.length) {
+                                                GetTimesheetDetail(req.body.id, res);
+                                            }
+                                        });
+                                    }
+                                }
+
+                            }
+                        });
+
+
+                    }
 
 
                 }
@@ -123,7 +138,7 @@ function Ticket() {
 
 
 }
-function GetTimesheetDetail(id,res) {
+function GetTimesheetDetail(id, res) {
     //MAIN-GET RETURN DATA
     var data;
     //Define sql
@@ -133,6 +148,7 @@ function GetTimesheetDetail(id,res) {
         if (err) {
             res.writeHead(503, { 'Content-type': 'application/json' });
             res.end(err);
+            logger.error(err);
             return;
         }
         if (rows.length != undefined) {

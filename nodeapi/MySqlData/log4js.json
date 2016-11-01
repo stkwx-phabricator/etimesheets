@@ -1,0 +1,24 @@
+﻿{
+    "appenders":
+        [
+            {
+                "type":"console",
+                "category":"console"
+            },
+            {
+                "category":"log_date",
+                "type": "dateFile",
+                "filename": "./logs/log_date/date",
+                "alwaysIncludePattern": true,
+                "pattern": "-yyyy-MM-dd-hh.log"
+
+            }
+        ],
+    "replaceConsole": true,
+    "levels":
+    {
+        "log_file":"ALL",
+        "console":"ALL",
+        "log_date":"ALL"
+    }
+}

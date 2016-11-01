@@ -1,7 +1,7 @@
 ﻿{
   "environment": {
-    "current": "development",
-    "development": {
+    "current": "local",
+    "local": {
       "dbinfo": {
         "username": "root",
         "password": "root",
@@ -10,7 +10,16 @@
         "dbname": "afsc"
 
       }
+    },
+    "development": {
+      "dbinfo": {
+        "username": "root",
+        "password": "!C0m@seTwX88",
+        "host": "172.16.96.240",
+        "port": "3306",
+        "dbname": "afsc"
 
+      }
     }
   }
 }

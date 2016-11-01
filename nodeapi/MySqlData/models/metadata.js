@@ -1,5 +1,6 @@
 ﻿var db = require('../mysql.js');
 var common = require('../common.js');
+var logger = require('../logger.js');
 
 function Metadata() {
     this.list = function (req, res) {
@@ -14,6 +15,7 @@ function Metadata() {
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
+                logger.error(err);
                 return;
             }
             var metadata = { times: []};

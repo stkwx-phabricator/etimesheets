@@ -1,6 +1,7 @@
 ﻿var crypto = require('crypto');
 var db = require('../mysql.js');
 require('../common.js');
+var logger=require('../logger.js');
 
 function User() {
     this.login = function (req, res) {
@@ -16,6 +17,7 @@ function User() {
             if (err) {
                 res.writeHead(503, { 'Content-type': 'application/json' });
                 res.end(err);
+                logger.error(err);
                 return;
             }
             if (rows.length != undefined) {
