@@ -68,9 +68,7 @@ define([ 'backbone', 'backboneView', 'View', 'Collection', 'Model' ], function(B
 		},
 		'logout' : function(){
 			this.user.destroy();
-			app_router.navigate('/login', {
-					trigger : true
-			});
+			window.location = location.origin;
 		},
 		'search' : function(term) {
 			this.loadLayout();

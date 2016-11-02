@@ -64,7 +64,6 @@ function Ticket() {
                     var row = rows[i];
                     oldarray.push(row.TIME_SHEET_LINE_ID);
                 }
-                logger.trace(oldarray.length);
                 //MAIN-SAVE THE UPDATES.
                 var count = 0;
                 if (linedata.length == 0) {

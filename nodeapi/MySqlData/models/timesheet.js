@@ -85,7 +85,6 @@ function Timesheet() {
             var data;
             //Define sql
             var sql = "call sp_GetTimesheetDetail (" + req.body.timeSheetId + ")";
-            console.log("@@@----" + sql);
             //Execute Query
             db.query(sql, function (err, rows) {
                 if (err) {

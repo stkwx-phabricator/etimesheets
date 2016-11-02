@@ -1,6 +1,6 @@
 ﻿{
   "environment": {
-    "current": "local",
+    "current": "development",
     "local": {
       "dbinfo": {
         "username": "root",

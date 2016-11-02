@@ -10,7 +10,7 @@
                 "type": "dateFile",
                 "filename": "./logs/log_date/date",
                 "alwaysIncludePattern": true,
-                "pattern": "-yyyy-MM-dd-hh.log"
+                "pattern": "-yyyy-MM-dd.log"
 
             }
         ],
