@@ -1,5 +1,5 @@
 define([ 'backbone', ], function(Backbone) {
 	return Backbone.Model.extend({
-		url : 'http://localhost:8081/api/metadata'
+		url : 'http://172.16.96.240:8081/api/metadata'
 	});
 });

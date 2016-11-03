@@ -123,7 +123,8 @@ module.exports = {
         })
 
         app.put('/api/timesheettoapprove/:id', function (req, res) {
-            if (req.session.user) {
+            var usersession = $user.user(req);
+            if (usersession != undefined) {
                 $timesheettoapprove.put(req, res);
             }
             else {

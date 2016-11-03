@@ -1,5 +1,5 @@
 define([ 'backbone', ], function(Backbone) {
 	return Backbone.Model.extend({
-		urlRoot : 'http://localhost:8081/api/ticket'
+		urlRoot : 'http://172.16.96.240:8081/api/ticket'
 	});
 });
