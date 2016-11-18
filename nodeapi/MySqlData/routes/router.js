@@ -138,6 +138,17 @@ module.exports = {
             var usersession = $user.user(req);
             if (usersession != undefined) {
                 req.session.user = usersession;
+                $timesheet.delete(req, res);
+            }
+            else {
+                res.writeHead(403, { 'Content-type': 'application/json' });
+                res.end('Access Dinied');
+            }
+        })
+        app.delete('/api/timesheettoapprove/:id', function (req, res) {
+            var usersession = $user.user(req);
+            if (usersession != undefined) {
+                req.session.user = usersession;
                 $timesheettoapprove.delete(req, res);
             }
             else {

@@ -9,7 +9,7 @@ function Timesheettoapprove() {
         //Define sql
         var sql = 'select distinct tm.TIME_SHEET_ID as timesheetid,s.STATE_NAME as state,tm.PERIOD_ID as periodid,pe.START_DATE as startdate,pe.END_DATE as enddate,tm.PERIOD_HOURS as totalhours' +
             ' from afsc_timesheet tm, afsc_timesheet_line tml, afsc_timesheet_state s, afsc_period pe' +
-            ' where tm.TIME_SHEET_ID=tml.TIME_SHEET_ID  and s.STATE_Code=tm.STATE_Code and pe.PERIOD_ID=tm.PERIOD_ID and tml.STATE_CODE=2 and tml.ACTUAL_APPROVER_USERID=' + req.session.user.id;
+            ' where tm.TIME_SHEET_ID=tml.TIME_SHEET_ID  and s.STATE_Code=tm.STATE_Code and pe.PERIOD_ID=tm.PERIOD_ID and tml.STATE_CODE=2 and tml.ACTUAL_APPROVER_USERID=' + req.session.user.id +' order by tm.TIME_SHEET_ID';
 
         //Execute Query
         db.query(sql, function (err, rows) {

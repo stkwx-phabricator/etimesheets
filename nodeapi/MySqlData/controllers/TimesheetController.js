@@ -12,3 +12,6 @@ exports.put = function (req, res) {
 exports.getwithids = function (req, res) {
     Timesheet.gettimesheetdetail(req, res);
 }
+exports.delete = function (req, res) {
+    Timesheet.deletetimesheet(req, res);
+}

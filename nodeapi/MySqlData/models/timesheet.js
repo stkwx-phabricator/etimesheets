@@ -8,7 +8,7 @@ function Timesheet() {
         var data = [];
         //Define sql
         var value = [req.session.user.id];
-        var sql = "select time_sheet_id as timeSheetId from afsc_timesheet where state_code=1 and resource_id=?";
+        var sql = "select time_sheet_id as timeSheetId from afsc_timesheet where state_code=1 and resource_id=? order by time_sheet_id";
         sql = db.format(sql, value);
 
         //Execute Query
@@ -241,6 +241,21 @@ function Timesheet() {
                 res.writeHead(404, { 'Content-type': 'application/json' });
                 res.end('Not found timesheet line ' + req.params.id + '!');
             }
+        });
+    }
+
+    this.deletetimesheet = function (req, res) {
+        var sql = 'call sp_AuditTimesheet ("' + req.params.id + '","' + req.session.user.id + '",3)';
+        //Execute Query
+        db.query(sql, function (err, rows) {
+            if (err) {
+                res.writeHead(503, { 'Content-type': 'application/json' });
+                res.end(err);
+                return;
+            }
+            res.writeHead(200, { 'Content-type': 'application/json' });
+            res.end("null");
+
         });
     }
 }
