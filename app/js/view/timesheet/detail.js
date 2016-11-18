@@ -12,7 +12,8 @@ define(['backbone', 'text!tmpl/timesheet/detail.html', 'Model'], function (Backb
             'change .timesheet-days .timesheet-detail input': 'ticket-edit',
             'click #timesheet-detail-submit': 'submit',
             'click #timesheet-detail-save': 'save',
-            'click #timesheet-detail-remove': 'remove'
+            'click #timesheet-detail-remove': 'remove',
+            'click #timesheet-detail-delete':'delete'
         },
         template: function () {
             return _.template(template);
@@ -220,6 +221,15 @@ define(['backbone', 'text!tmpl/timesheet/detail.html', 'Model'], function (Backb
             this.model.set('timeSheetLines', timelines);
             console.log(this.model.get('timeSheetLines'));
             this.save(event);
+        },
+        'delete': function (event) {
+            this.model.destroy({
+                success: function () {
+                    console.log('deleted');
+                    app_router.navigate("/", { trigger: true });
+                }
+            });
+
         },
         // Private Methods
         'fillProjects': function (tickets) {

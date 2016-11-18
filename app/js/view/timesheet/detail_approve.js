@@ -25,8 +25,10 @@ define([ 'backbone', 'text!tmpl/timesheet/detail_approve.html','Model' ], functi
 			
 		},
         
-        'reject' : function(event){
-            this.model.destroy({
+		'reject': function (event) {
+		    var approve = new Model.TimesheetToApprove();
+		    approve.set({ id: this.model.get('timeSheetId') });
+		    approve.destroy({
 				success : function(){
                     console.log('rejected');
 					app_router.navigate("/",{trigger:true});
