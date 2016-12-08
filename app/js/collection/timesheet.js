@@ -1,6 +1,6 @@
 define([ 'backbone', 'Model' ], function(Backbone, Model) {
 	return Backbone.Collection.extend({
-		url : 'http://172.16.96.240:8081/api/timesheet',
+		url : 'http://172.16.98.175:8081/api/timesheet',
 		model : Model.Timesheet,
 		search: function(t){
 			var term = t || "",

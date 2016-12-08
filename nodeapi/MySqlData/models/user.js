@@ -1,4 +1,4 @@
-﻿var crypto = require('crypto');
+var crypto = require('crypto');
 var db = require('../mysql.js');
 require('../common.js');
 var logger=require('../logger.js');
@@ -60,6 +60,7 @@ function User() {
             var sessionid = req.headers.authorization.split(' ').length > 1 ? req.headers.authorization.split(' ')[1] : req.headers.authorization;
             sessionuser = req.sessionStore.sessions[sessionid] != undefined ? JSON.parse(req.sessionStore.sessions[sessionid]).user : undefined;
         }
+req.session.user=sessionuser;
         return sessionuser;
     }
 }

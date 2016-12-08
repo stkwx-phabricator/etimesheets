@@ -1,7 +1,7 @@
 define([ 'backbone','jquery','modernizr','jquery.cookie' ], function(Backbone, $) {
 	'strict mode';
 	return Backbone.Model.extend({
-		url : 'http://172.16.96.240:8081/api/user',
+		url : 'http://172.16.98.175:8081/api/user',
 		idAttribute : "id",
 		authenticated : false,
 		store : function() {
